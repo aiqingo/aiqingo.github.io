@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://aiqingo.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Wed, 30 Apr 2025 04:17:05 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>C#入门</title><link>https://aiqingo.github.io/post/C%23-ru-men.html</link><description># C#入门  
+# C#入门  
 
 ![C](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/backup/C%23%E5%85%A5%E9%97%A8.jpg)
 
@@ -99,7 +98,7 @@
    ### //string 是字符串类型 用来存储多个字符的 没有上限
 
    ```
-   string str = '的骄傲了肯定就发生123123sdafjkasdkfjaskldjfAKKSAJD'; 
+   string str = "的骄傲了肯定就发生123123sdafjkasdkfjaskldjfAKKSAJD"; 
    ```
 
 4. ###  常量 //关键字 const
@@ -117,14 +116,14 @@
    ####   // 换行 \n
 
    ```
-   str = '1231231\n23123123123';
+   str = "1231231\n23123123123";
    Console.WriteLine(str);
    ```
 
    ####       // 斜杠 \\  计算机文件路径 是要用到\符号的
 
    ```
-   str = '哈\\哈哈';
+   str = "哈\\哈哈";
    Console.WriteLine(str);
    ```
 
@@ -133,44 +132,44 @@
    ####       // 制表符（空一个tab键）  \t
 
    ```
-   str = '哈\t哈哈';
+   str = "哈\t哈哈";
    Console.WriteLine(str);
    ```
 
    ####       // 光标退格  \b
 
    ```
-   str = '123\b123';
+   str = "123\b123";
    Console.WriteLine(str);
    ```
 
    ####       // 空字符 \0
 
    ```
-    str = '1234\0123';
+    str = "1234\0123";
     Console.WriteLine(str);
    ```
 
    ####       // 警报音  \a
 
    ```
-   str = '\a';
+   str = "\a";
    Console.WriteLine(str);
    ```
 
    ####       //取消转义字符
 
    ```
-   string str2 = @'哈哈\哈哈';
+   string str2 = @"哈哈\哈哈";
    Console.WriteLine(str2);
-   Console.WriteLine(@'\n\\');
+   Console.WriteLine(@"\n\\");
    ```
 
 6. ###  // 什么是类型转换
 
    ​      // 类型转换 就是不同变量类型之间的相互转换
 
-   ​      // 隐式转换的基本规则——&gt;不同类型之间自动转换
+   ​      // 隐式转换的基本规则——>不同类型之间自动转换
 
    ​      // 大范围装小范围.
 
@@ -188,7 +187,7 @@
 
    ​      //作用  把字符串类型转换为对应的类型
 
-   ​      //语法： 变量类型.Parse('字符串')
+   ​      //语法： 变量类型.Parse("字符串")
 
    ​      //注意： 字符串必须能够转换成对应类型 否则报错
 
@@ -243,7 +242,7 @@
    ​      // 先看右侧 再看左侧 把右侧的值赋值给左侧的变量
 
    ```
-   string myName = '唐老狮';
+   string myName = "唐老狮";
    ```
 
    #### //加 +
@@ -315,14 +314,14 @@
 
 10. ### 字符串拼接方式 
 
-    ####       //string.Format('待拼接的内容', 内容1, 内容2,......);
+    ####       //string.Format("待拼接的内容", 内容1, 内容2,......);
 
     ​      //拼接内容中的固定规则
 
     ​      //想要被拼接的内容用占位符替代 {数字} 数字:0~n 依次往后 
 
     ```
-    string str2 = string.Format('我是{0}, 我今年{1}岁, 我想要{2}', '唐老狮', 18, '天天学习，好好向上');
+    string str2 = string.Format("我是{0}, 我今年{1}岁, 我想要{2}", "唐老狮", 18, "天天学习，好好向上");
     ```
 
     
@@ -331,28 +330,28 @@
 
     ​      // 用于比较两个变量或常量
 
-    ​      // 是否大于 &gt;
+    ​      // 是否大于 >
 
-    ​      // 是否小于 &lt;
+    ​      // 是否小于 <
 
     ​      // 是否等于 == 
 
     ​      // 是否不等于 !=
 
-    ​      // 是否大于等于 &gt;=
+    ​      // 是否大于等于 >=
 
-    ​      // 是否小于等于 &lt;=
+    ​      // 是否小于等于 <=
 
 12. ### 逻辑运算符
 
     #### 逻辑与
 
-    ​      //符号 &amp;&amp;  并且
+    ​      //符号 &&  并且
 
     ​      //规则 对两个bool值进行逻辑运算 有假则假 同真为真
 
     ```
-    bool result = true &amp;&amp; false;
+    bool result = true && false;
     ```
 
     #### 逻辑或
@@ -377,7 +376,7 @@
 
     #### 混合使用优先级问题
 
-    ​      // 规则  !(逻辑非)优先级最高  **&amp;&amp;(逻辑与)优先级高于||(逻辑或)**
+    ​      // 规则  !(逻辑非)优先级最高  **&&(逻辑与)优先级高于||(逻辑或)**
 
     ​      // 逻辑运算符优先级 低于 算数运算符 条件运算符（逻辑非除外）
 
@@ -387,18 +386,18 @@
      int i3 = 1;
     // || 有真则真
     // 只要 逻辑与或者逻辑或 左边满足了条件 
-    // i3 &gt; 0 true 
+    // i3 > 0 true 
     // 只要 满足条件 右边的内容 对于我们来说 已经不重要
     //逻辑或 有真则真 那左边只要为真了 右边就不重要
-    result = i3 &gt; 0 || ++i3 &gt;= 1;
-    // false &amp;&amp; i3 ++ &gt; 1;抛弃后面不去计算
+    result = i3 > 0 || ++i3 >= 1;
+    // false && i3 ++ > 1;抛弃后面不去计算
     //逻辑与 有假则假 那左边只要为假了 右边就不重要
-    result = i3 &lt; 0 &amp;&amp; i3++ &gt; 1; 
+    result = i3 < 0 && i3++ > 1; 
     ```
 
 13. ### 位运算符
 
-    **位与 &amp;**
+    **位与 &**
 
     ```
     // 规则 连接两个数值进行位计算 将数值转为2进制 
@@ -406,9 +405,9 @@
     int a = 1;// 001
     int b = 5;// 101
     //  001
-    //&amp; 101
+    //& 101
     //  001  =  1
-    int c = a &amp; b;
+    int c = a & b;
     ```
 
     **位或 |**
@@ -452,13 +451,13 @@
     Console.WriteLine(c);
     ```
 
-    **左移&lt;&lt; 和 右移&gt;&gt;**
+    **左移<< 和 右移>>**
 
     ```
     // 规则 让一个数的2进制数进行左移和右移
     // 左移几位 右侧加几个0
     a = 5; // 101
-    c = a &lt;&lt; 5;
+    c = a << 5;
     // 1位 1010
     // 2位 10100
     // 3位 101000
@@ -467,7 +466,7 @@
     Console.WriteLine(c);
     // 右移几位 右侧去掉几个数
     a = 5; // 101
-    c = a &gt;&gt; 2;
+    c = a >> 2;
     // 1位 10
     // 2位 1
     Console.WriteLine(c);
@@ -481,7 +480,7 @@
     //固定语法：空位   ? 空位         : 空位;
     //关键信息：bool类型 ? bool类型为真返回内容 : bool类型为假返回内容;
     //三目运算符 会有返回值，这个返回值类型必须一致，并且必须使用！
-    string str = false ? '条件为真' : '条件为假';
+    string str = false ? "条件为真" : "条件为假";
     ```
 
     
@@ -592,4 +591,3 @@
 
 
 
-。</description><guid isPermaLink="true">https://aiqingo.github.io/post/C%23-ru-men.html</guid><pubDate>Wed, 30 Apr 2025 04:16:40 +0000</pubDate></item></channel></rss>
