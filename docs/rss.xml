@@ -1,5 +1,720 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Wed, 30 Apr 2025 04:32:48 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#基础</title><link>https://aiqingo.github.io/post/C%23-ji-chu.html</link><description>C#基础。</description><guid isPermaLink="true">https://aiqingo.github.io/post/C%23-ji-chu.html</guid><pubDate>Wed, 30 Apr 2025 04:17:57 +0000</pubDate></item><item><title>实用软件集合</title><link>https://aiqingo.github.io/post/shi-yong-ruan-jian-ji-he.html</link><description># 实用软件集合
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Sun, 04 May 2025 08:25:38 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#基础</title><link>https://aiqingo.github.io/post/C%23-ji-chu.html</link><description># C#基础
+![C](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9.jpg)
+
+
+1. ### 枚举enum
+
+   ```
+   枚举语法
+       // 枚举名 以E或者E_开头 作为我们的命名规范
+       //enum E_自定义枚举名
+       //{
+       //    自定义枚举项名字, //枚举中包裹的 整形常量  第一个默认值是0 下面会依次累加
+       //    自定义枚举项名字1,//1
+       //    自定义枚举项名字2,//2
+       //}
+   
+       //enum E_自定义枚举名
+       //{
+       //    自定义枚举项名字 = 5, //第一个枚举项的默认值 变成5了 
+       //    自定义枚举项名字1,// 6
+       //    自定义枚举项名字2 = 100,
+       //    自定义枚举项名字3,//101
+       //    自定义枚举项名字4,//102
+       //}
+       
+       枚举的类型转换
+       // 1.枚举和int互转
+       int i = (int)playerType;
+       Console.WriteLine(i);
+       枚举和string相互转换
+       string str = playerType.ToString();
+       Console.WriteLine(str);
+       
+       //把string转成枚举呢
+               //Parse后 第一个参数 ：你要转为的是哪个 枚举类型 第二个参数：用于转换的对应枚举项的字符串
+               //转换完毕后 是一个通用的类型 我们需要用括号强转成我们想要的目标枚举类型
+               playerType = (E_PlayerType)Enum.Parse(typeof(E_PlayerType), 'Other');
+               Console.WriteLine(playerType);
+   ```
+
+   
+
+2. ### 数组
+
+   #### 一维数组
+
+   ```
+   // 变量类型[] 数组名;//只是申明了一个数组 但是并没有开房
+   // 变量类型 可以是我们学过的 或者 没学过的所有变量类型
+   int[] arr1;
+   // 变量类型[] 数组名 = new 变量类型[数组的长度];
+   int[] arr2 = new int[5]; //这种方式 相当于开了5个房间 但是房间里面的int值 默认为0
+   // 变量类型[] 数组名 = new 变量类型[数组的长度]{内容1,内容2,内容3,.......};
+   int[] arr3 = new int[5] { 1, 2, 3, 4, 5 };
+   // 变量类型[] 数组名 = new 变量类型[]{内容1,内容2,内容3,.......};
+   int[] arr4 = new int[] { 1,2,3,4,5,6,7,8,9}; //后面的内容就决定了 数组的长度 “房间数”
+   // 变量类型[] 数组名 = {内容1,内容2,内容3,.......};
+               int[] arr5 = { 1,3,4,5,6};//后面的内容就决定了 数组的长度 “房间数”
+   //1.数组的长度
+   // 数组变量名.Length
+   Console.WriteLine(array.Length); 
+   
+   //2.获取数组中的元素
+   //数组中的下标和索引 他们是从0开始的
+   //通过 索引下标去 获得数组中某一个元素的值时
+   //一定注意！！！！！！！！
+   //不能越界  数组的房间号 范围 是 0 ~ Length-1
+   Console.WriteLine(array[0]);
+   Console.WriteLine(array[2]);
+   Console.WriteLine(array[4]);
+   
+   //3.修改数组中的元素
+   array[0] = 99;
+   Console.WriteLine(array[0]);
+   
+   //4.遍历数组 通过循环 快速获取数组中的每一个元素
+   Console.WriteLine('**********************');
+   for (int i = 0; i &lt; array.Length; i++)
+   {
+       Console.WriteLine(array[i]);
+   }
+   Console.WriteLine('**********************');
+   //5.增加数组的元素
+   // 数组初始化以后 是不能够 直接添加新的元素的
+   int[] array2 = new int[6];
+   //搬家
+   for (int i = 0; i &lt; array.Length; i++)
+   {
+       array2[i] = array[i];
+   }
+   array = array2;
+   for (int i = 0; i &lt; array.Length; i++)
+   {
+       Console.WriteLine(array[i]);
+   }
+   array[5] = 999;
+   Console.WriteLine('**********************');
+   //6.删除数组的元素
+   // 数组初始化以后 是不能够 直接删除元素的
+   // 搬家的原理
+   int[] array3 = new int[5];
+   //搬家
+   for (int i = 0; i &lt; array3.Length; i++)
+   {
+       array3[i] = array[i];
+   }
+   array = array3;
+   Console.WriteLine(array.Length);
+   
+   //7.查找数组中的元素
+   // 99 2 3 4 5 
+   // 要查找 3这个元素在哪个位置
+   // 只有通过遍历才能确定 数组中 是否存储了一个目标元素
+   int a = 3;
+   
+   for (int i = 0; i &lt; array.Length; i++)
+   {
+       if( a == array[i] )
+       {
+           Console.WriteLine('和a相等的元素在{0}索引位置', i);
+           break;
+       }
+   }
+   ```
+
+3. 二维数组
+
+   ```
+    二维数组的申明
+   
+               //变量类型[,] 二维数组变量名;
+               int[,] arr; //申明过后 会在后面进行初始化
+   
+               //变量类型[,] 二维数组变量名 = new 变量类型[行,列];
+               int[,] arr2 = new int[3, 3];
+   
+               //变量类型[,] 二维数组变量名 = new 变量类型[行,列]{ {0行内容1, 0行内容2, 0行内容3.......}, {1行内容1, 1行内容2, 1行内容3.......}.... };
+               int[,] arr3 = new int[3, 3] { { 1, 2, 3 }, 
+                                             { 4, 5, 6 }, 
+                                             { 7, 8, 9 } };
+   
+               //变量类型[,] 二维数组变量名 = new 变量类型[,]{ {0行内容1, 0行内容2, 0行内容3.......}, {1行内容1, 1行内容2, 1行内容3.......}.... };
+               int[,] arr4 = new int[,] { { 1, 2, 3 },
+                                          { 4, 5, 6 },
+                                          { 7, 8, 9 } };
+   
+               //变量类型[,] 二维数组变量名 = { {0行内容1, 0行内容2, 0行内容3.......}, {1行内容1, 1行内容2, 1行内容3.......}.... };
+               int[,] arr5 = { { 1, 2, 3 },
+                               { 4, 5, 6 },
+                               { 7, 8, 9 } };
+                               
+   二维数组的使用
+               int[,] array = new int[,] { { 1, 2, 3 },
+                                           { 4, 5, 6 } };
+               //1.二维数组的长度
+               //我们要获取 行和列分别是多长
+               //得到多少行
+               Console.WriteLine(array.GetLength(0));
+               //得到多少列
+               Console.WriteLine(array.GetLength(1));
+   
+               //2.获取二维数组中的元素
+               // 注意：第一个元素的索引是0 最后一个元素的索引 肯定是长度-1
+               Console.WriteLine(array[0, 1]);
+               Console.WriteLine(array[1, 2]);
+   
+               //3.修改二维数组中的元素
+               array[0, 0] = 99;
+               Console.WriteLine(array[0, 0]);
+               Console.WriteLine('**********');
+               //4.遍历二维数组
+               for (int i = 0; i &lt; array.GetLength(0); i++)
+               {
+                   for (int j = 0; j &lt; array.GetLength(1); j++)
+                   {
+                       //i 行 0 1
+                       //j 列 0 1 2
+                       Console.WriteLine(array[i, j]);
+                       //0,0  0,1  0,2
+                       //1,0  1,1  1,2
+                   }
+               }
+   
+               //5.增加数组的元素
+               // 数组 声明初始化过后 就不能再原有的基础上进行 添加 或者删除了
+               int[,] array2 = new int[3, 3];
+               for (int i = 0; i &lt; array.GetLength(0); i++)
+               {
+                   for (int j = 0; j &lt; array.GetLength(1); j++)
+                   {
+                       array2[i, j] = array[i, j];
+                   }
+               }
+               array = array2;
+               array[2, 0] = 7;
+               array[2, 1] = 8;
+               array[2, 2] = 9;
+               Console.WriteLine('**********');
+               for (int i = 0; i &lt; array.GetLength(0); i++)
+               {
+                   for (int j = 0; j &lt; array.GetLength(1); j++)
+                   {
+                       //i 行 0 1
+                       //j 列 0 1 2
+                       Console.WriteLine(array[i, j]);
+                       //0,0  0,1  0,2
+                       //1,0  1,1  1,2
+                   }
+               }
+   
+               //6.删除数组的元素
+   
+               //7.查找数组中的元素
+               // 如果要在数组中查找一个元素是否等于某个值
+               // 通过遍历的形式去查找
+    //总结：
+               //1.概念：同一变量类型的 行列数据集合
+               //2.一定要掌握的内容：申明，遍历，增删查改
+               //3.所有的变量类型都可以申明为 二维数组
+               //4.游戏中一般用来存储 矩阵，再控制台小游戏中可以用二维数组 来表示地图格子
+    
+   ```
+
+   
+
+4. ### 交错数组
+
+   ```
+   数组的申明
+   
+               //变量类型[][] 交错数组名;
+               int[][] arr1;
+   
+               //变量类型[][] 交错数组名 = new 变量类型[行数][];
+               int[][] arr2 = new int[3][];
+   
+               //变量类型[][] 交错数组名 = new 变量类型[行数][]{ 一维数组1, 一维数组2,........ };
+               int[][] arr3 = new int[3][] { new int[] { 1, 2, 3 },
+                                             new int[] { 1, 2 },
+                                             new int[] { 1 }};
+   
+               //变量类型[][] 交错数组名 = new 变量类型[][]{ 一维数组1, 一维数组2,........ };
+               int[][] arr4 = new int[][] { new int[] { 1, 2, 3 },
+                                             new int[] { 1, 2 },
+                                             new int[] { 1 }};
+   
+               //变量类型[][] 交错数组名 = { 一维数组1, 一维数组2,........ };
+               int[][] arr5 = { new int[] { 1, 2, 3 },
+                                new int[] { 1, 2 },
+                                new int[] { 1 }};
+                                
+                                
+                                  int[][] array = { new int[] { 1,2,3},
+                                 new int[] { 4,5} };
+               //1.数组的长度
+               //行
+               Console.WriteLine(array.GetLength(0));
+               //得到某一行的列数
+               Console.WriteLine(array[0].Length);
+   
+               //2.获取交错数组中的元素
+               // 注意：不要越界
+               Console.WriteLine(array[0][1]);
+   
+               //3.修改交错数组中的元素
+               array[0][1] = 99;
+               Console.WriteLine(array[0][1]);
+   
+               //4.遍历交错数组
+               for (int i = 0; i &lt; array.GetLength(0); i++)
+               {
+                   for (int j = 0; j &lt; array[i].Length; j++)
+                   {
+                       Console.Write(array[i][j] + ' ');
+                   }
+                   Console.WriteLine();
+               }
+   ```
+
+   
+
+5. 值类型与引用类型
+
+   ```
+   //无符号整形
+               //byte b = 1;
+               //ushort us = 1;
+               //uint ui = 1;
+               //ulong ul = 1;
+               ////有符号整形
+               //sbyte sb = 1;
+               //short s = 1;
+               //int i = 1;
+               //long l = 1;
+               ////浮点数
+               //float f = 1f;
+               //double d = 1.1;
+               //decimal de = 1.1m;
+               ////特殊类型
+               //bool bo = true;
+               //char c = 'A';
+               //string str = 'strs';
+               //复杂数据类型
+               // enum 枚举 
+               // 数组 (一维，二维，交错)
+   
+               //把以上 学过的 变量类型 分成 值类型和引用类型
+               //引用类型: string, 数组, 类
+               //值类型: 其它、结构体
+               
+                 //1.使用上的区别
+               
+               //值类型
+               int a = 10;
+               //引用类型
+               int[] arr = new int[] { 1, 2, 3, 4 };
+   
+               //申明了一个b让其等于之前的a
+               int b = a;
+               //申明了一个arr2让其等于之前的arr
+               int[] arr2 = arr;
+               Console.WriteLine('a={0}, b={1}', a, b);
+               Console.WriteLine('arr[0]={0}, arr2[0]={1}', arr[0], arr2[0]);
+   
+               b = 20;
+               arr2[0] = 5;
+               Console.WriteLine('修改了b和arr2[0]之后');
+               Console.WriteLine('a={0}, b={1}', a, b);
+               Console.WriteLine('arr[0]={0}, arr2[0]={1}', arr[0], arr2[0]);
+   
+               //值类型 在相互赋值时 把内容拷贝给了对方  它变我不变
+               //引用类型的相互赋值 是 让两者指向同一个值  它变我也变
+   
+               //2.为什么有以上区别
+               //值类型 和 引用类型 存储在的 内存区域 是不同的 存储方式是不同的
+               //所以就造成了 他们在使用上的区别
+   
+               // 值类型存储在 栈空间  —— 系统分配，自动回收，小而快
+               // 引用类型 存储在 堆空间 —— 手动申请和释放，大而慢
+   
+               //new 了 就是开了新房间 和之前的 没有什么关系了 所以 arr不会有任何变化
+   ```
+
+   
+
+6. ### 函数
+
+   ```
+   基本语法
+           //    1      2      3                4
+           // static 返回类型 函数名(参数类型 参数名1, 参数类型 参数名2, .......)
+           //{
+           //      函数的代码逻辑;
+           //      函数的代码逻辑;
+           //      函数的代码逻辑;
+           //      .............
+           //       5
+           //      return 返回值;(如果有返回类型才返回)
+           //}
+   
+           //1. 关于static 不是必须的 在没有学习类和结构体之前 都是必须写的
+   
+           //2-1. 关于返回类型 引出一个新的关键字  void(表示没有返回值)
+           //2-2. 返回类型 可以写任意的变量类型  14种变量类型 + 复杂数据类型（数组、枚举、结构体、类class）
+   
+           //3. 关于函数名 使用帕斯卡命名法命名  myName（驼峰命名法）  MyName(帕斯卡命名法)
+   
+           //4-1. 参数不是必须的，可以有0~n个参数  参数的类型也是可以是任意类型的 14种变量类型 + 复杂数据类型（数组、枚举、结构体、类class）
+           //     多个参数的时候 需要用 逗号隔开
+           //4-2. 参数名 驼峰命名法
+   
+           //5. 当返回值类型不为void时 必须通过新的关键词 return返回对应类型的内容  （注意：即使是void也可以选择性使用return）
+           
+   ```
+
+   
+
+7. ### ref和out
+
+   ```
+    ref和out的使用
+           //函数参数的修饰符
+           //当传入的值类型参数在内部修改时 或者引用类型参数在内部重新申明时
+           //外部的值会发生变化
+   
+           //ref
+           static void ChangeValueRef(ref int value)
+           {
+               //out传入的变量必须在内部赋值 ref不用
+               value = 3;
+           }
+   
+           static void ChangeArrayRef( ref int[] arr )
+           {
+               arr = new int[] { 100, 200, 300 };
+           }
+   
+           //out
+           static void ChangeValueOut(out int value)
+           {
+               //out传入的变量必须在内部赋值 ref不用
+               value = 99;
+           }
+   
+           static void ChangeArrayOut(out int[] arr)
+           {
+               arr = new int[] { 999, 888, 777 };
+           }
+           
+               //1.ref传入的变量必须初始化  out不用
+           //2.out传入的变量必须在内部赋值  ref不用
+   
+           // ref传入的变量必须初始化 但是在内部 可改可不改
+           // out传入的变量不用初始化 但是在内部 必须修改该值（必须赋值） 
+   
+   
+           //总结
+           //1.ref和out的作用 ： 解决值类型和引用类型 在函数内部 改值 或者 重新申明 能够影响外部传入的变量 让其也被修改
+           //2.使用上：就是在申明参数的时候 前面加上 ref和out的 关键字即可 使用时 同上
+           //3.区别
+           // ref传入的变量必须初始化 但是在内部 可改可不改
+           // out传入的变量不用初始化 但是在内部 必须修改该值（必须赋值）
+   ```
+
+   
+
+8. ### 变长参数和参数默认值
+
+   ```
+   //变长参数关键词
+           //举例  函数要计算 n个整数的和
+           //static int Sum(int a, int b,..........)
+   
+           //变长参数关键字 params
+           static int Sum(params int[] arr)
+           {
+               int sum = 0;
+               for (int i = 0; i &lt; arr.Length; i++)
+               {
+                   sum += arr[i];
+               }
+               return sum;
+           }
+           
+           //params int[] 意味着可以传入n个int参数 n可以等于0  传入的参数会存在arr数组中
+           // 注意：
+           //1.params关键字后面必为数组
+           //2.数组的类型可以是任意的类型
+   
+   
+           //3.函数参数可以有 别的参数和 params关键字修饰的参数
+           //4.函数参数中只能最多出现一个params关键字 并且一定是在最后一组参数 前面可以有n个其它参数
+            static void Eat( string name, int a, int b, params string[] things)
+           {
+   
+           }
+           //参数默认值
+           //有参数默认值的参数 一般称为可选参数
+           //作用是 当调用函数时可以不传入参数，不传就会使用默认值作为参数的值
+           static void Speak(string str = '我没什么话可说')
+           {
+               Console.WriteLine(str);
+           }
+   
+   
+           //注意：
+           //1.支持多参数默认值 每个参数都可以有默认值
+           //2.如果要混用 可选参数 必须写在 普通参数后面
+           static void Speak2(string a, string test, string name = '', string str = '我没什么话可说')
+           {
+   
+           }
+           
+           //总结
+           // 1 变长参数关键字 params
+           // 作用： 可以传入n个同类型参数   n可以是0
+           // 注意：
+           // 1. params后面必须是数组 意味着只能是同一类型的可变参数
+           // 2. 变长参数只能有一个
+           // 3. 必须在所有参数最后写变长参数 
+   
+           // 2 参数默认值（可选参数）
+           // 作用：可以给参数默认值 使用时可以不传参 不传用默认的 传了用传的
+           // 注意：
+           // 1. 可选参数可以有多个
+           // 2. 正常参数比写在可选参数前面，可选参数只能写在所有参数的后面
+   ```
+
+9. ### 重载
+
+   ```
+    //注意：
+           //1.重载和返回值类型无关，只和参数类型，个数，顺序有关
+           //2.调用时 程序会自己根据传入的参数类型判断使用哪一个重载
+           static int CalcSum(int a, int b)
+           {
+               return a + b;
+           }
+   
+           //参数数量不同
+           static int CalcSum(int a, int b, int c)
+           {
+               return a + b + c;
+           }
+   
+           //数量相同 类型不同
+           static float CalcSum(float a, float b)
+           {
+               return a + b;
+           }
+   
+           //数量相同 类型不同
+           static float CalcSum(int a, float f)
+           {
+               return a + f;
+           }
+   
+           //数量相同 顺序不同
+           static float CalcSum(float f, int a)
+           {
+               return f + a;
+           }
+   
+           //ref 和 out
+   
+           // ref和out 可以理解成 他们也是一种变量类型 所以可以用在重载中 但是 ref和out不能同时修饰
+           static float CalcSum(ref float f, int a)
+           {
+               return f + a;
+           }
+   
+           static float CalcSum(int a, int b, params int[] arr)
+           {
+               return 1;
+           }
+                //总结
+           //概念：同一个语句块中，函数名相同，参数数量、类型、顺序不同的函数 就称为我们的重载函数
+           //注意：和返回值无关
+           //作用：一般用来处理不同参数的同一类型的逻辑处理
+   ```
+
+   
+
+10. ### 递归
+
+    ```
+      //用递归函数打印出 0到10
+            //递归函数 就是自己调用自己
+            static void Fun(int a)
+            {
+                //第四步：结束条件
+                if( a &gt; 10 )
+                {
+                    return;
+                }
+                //第二步：完成要求 打印
+                Console.WriteLine(a);
+                //第三部：完成一个 递归的变化 作为我们条件的判断
+                ++a;
+                //第一步：构造了一个递归
+                Fun(a);
+            }
+    ```
+
+11. ### 结构体
+
+    ```
+    //1.结构体一般写在 namespace语句块中
+        //2.结构体关键字 struct
+    
+        //struct 自定义结构体名
+        //{
+        //    // 第一部分
+        //    // 变量
+    
+        //    // 第二部分
+        //    // 构造函数(可选)
+    
+        //    // 第三部分 
+        //    // 函数
+        //}
+        // 注意 结构体名字 我们的规范 是 帕斯卡命名法
+          // 表现学生数据 的 结构体
+        // 申明结构体 和 申明结构体变量 也是两个概念
+        // 申明结构体
+        struct Student
+        { 
+            //修饰结构体中变量和方法 是否能被外部使用
+            //public 公共的 可以被外部访问
+            //private 私有的 只能在内容使用
+            //默认不写 为private 
+    
+    
+            //变量
+            //结构体申明的变量 不能直接初始化
+            //变量类型 可以写任意类型 包括结构体 但是 不能是自己的结构体 可以是其它的
+            //Student s;// 不能是自己的结构体
+            //年龄
+            public int age;
+            //性别
+            public bool sex;
+            //学号
+            public int number;
+            //姓名
+            public string name;
+    
+            //构造函数
+           
+            //基本概念
+            //1.没有返回值
+            //2.函数名必须和结构体名相同
+            //3.必须有参数
+            //4.如果申明了构造函数 那么必须在其中对所有变量数据初始化
+    
+            //构造函数 一般是用于在外部方便初始化的
+            public Student(int age, bool sex, int number, string name)
+            {
+                //新的关键字 this 
+                //代表自己
+                this.age = age;
+                this.sex = sex;
+                this.number = number;
+                this.name = name;
+            }
+    
+        
+    
+            //函数方法
+            //表现这个数据结构的行为
+    
+            //注意 在结构体中的方法 目前不需要加static关键字 
+            public void Speak()
+            {
+                //函数中可以直接使用结构体内部申明的变量
+                Console.WriteLine('我的名字是{0},我今年{1}岁', name, age);
+            }
+            //可以根据需求 写无数个函数的
+        }
+    ```
+
+    
+
+12. ### 排序
+
+    **冒泡排序**
+
+    ```
+       优化
+       bool isSort = false;
+             
+                for (int m = 0; m &lt; arr.Length; m++)
+                {
+                    //每一轮开始时 默认没有进行过交换
+                    isSort = false;
+                    // 尽一次循环 就需要比较一轮
+                    for (int n = 0; n &lt; arr.Length - 1 - m; n++)
+                    {
+                        //如果 第n个数 比第n+1个数 大 他们就要交换位置
+                        if (arr[n] &gt; arr[n + 1])
+                        {
+                            isSort = true;
+                            // 第二步 交换位置
+                            // 中间商不赚差价 
+                            int temp = arr[n];
+                            arr[n] = arr[n + 1];
+                            arr[n + 1] = temp;
+                        }
+                    }
+                    //当一轮结束过后 如果isSort这个标识 还是false
+                    //那就意味着 已经是最终的序列了 不需要再判断交换了
+                    if( !isSort )
+                    {
+                        break;
+                    }
+                }
+    
+    ```
+
+    **选择排序** //套路写法//两层循环//外层轮数//内层寻找//初始索引//记录极值
+
+      //内存循环外交换
+
+    ```
+      for (int m = 0; m &lt; arr.Length; m++)
+                {
+                    //第一步 申明一个中间商 来记录索引
+                    //每一轮开始 默认第一个都是极值
+                    int index = 0;
+                    //第二步
+                    //依次比较
+                    // -m的目的 是排除上一轮 已经放好位置的数
+                    for (int n = 1; n &lt; arr.Length - m; n++)
+                    {
+                        //第三步
+                        //找出极值（最大值）
+                        if (arr[index] &lt; arr[n])
+                        {
+                            index = n;
+                        }
+                    }
+    
+                    //第四步 放入目标位置
+                    //Length - 1 - 轮数
+                    //如果当前极值所在位置 就是目标位置 那就没必要交换了
+                    if (index != arr.Length - 1 - m)
+                    {
+                        int temp = arr[index];
+                        arr[index] = arr[arr.Length - 1 - m];
+                        arr[arr.Length - 1 - m] = temp;
+                    }
+                }
+    ```
+
+    
+
+。</description><guid isPermaLink="true">https://aiqingo.github.io/post/C%23-ji-chu.html</guid><pubDate>Wed, 30 Apr 2025 04:17:57 +0000</pubDate></item><item><title>实用软件集合</title><link>https://aiqingo.github.io/post/shi-yong-ruan-jian-ji-he.html</link><description># 实用软件集合
 
 年报 链接：https://share.weiyun.com/UWohFU7M
 各种网站集合 链接：https://share.weiyun.com/WazLQ3cz  
