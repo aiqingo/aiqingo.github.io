@@ -1,7 +1,6 @@
 # C#入门  
 
-![C](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/backup/C%23%E5%85%A5%E9%97%A8.jpg)
-
+![C](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23%E5%85%A5%E9%97%A8%E5%86%85%E5%AE%B9.jpg)
 1. ##  变量类型 
 
    #### 有符号的整形变量 是能存储 一定范围 正负数包括0的变量类型

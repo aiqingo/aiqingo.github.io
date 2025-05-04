@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Sun, 04 May 2025 08:25:38 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#基础</title><link>https://aiqingo.github.io/post/C%23-ji-chu.html</link><description># C#基础
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Sun, 04 May 2025 08:26:20 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#基础</title><link>https://aiqingo.github.io/post/C%23-ji-chu.html</link><description># C#基础
 ![C](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9.jpg)
 
 
@@ -747,8 +747,7 @@
 
 。</description><guid isPermaLink="true">https://aiqingo.github.io/post/shi-yong-ruan-jian-ji-he.html</guid><pubDate>Wed, 30 Apr 2025 04:17:10 +0000</pubDate></item><item><title>C#入门</title><link>https://aiqingo.github.io/post/C%23-ru-men.html</link><description># C#入门  
 
-![C](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/backup/C%23%E5%85%A5%E9%97%A8.jpg)
-
+![C](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23%E5%85%A5%E9%97%A8%E5%86%85%E5%AE%B9.jpg)
 1. ##  变量类型 
 
    #### 有符号的整形变量 是能存储 一定范围 正负数包括0的变量类型
