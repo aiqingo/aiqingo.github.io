@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Tue, 06 May 2025 09:29:15 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#核心</title><link>https://aiqingo.github.io/post/C%23-he-xin.html</link><description>C#核心。</description><guid isPermaLink="true">https://aiqingo.github.io/post/C%23-he-xin.html</guid><pubDate>Sun, 04 May 2025 08:27:57 +0000</pubDate></item><item><title>C#基础</title><link>https://aiqingo.github.io/post/C%23-ji-chu.html</link><description># C#基础
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Fri, 09 May 2025 05:41:08 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#核心</title><link>https://aiqingo.github.io/post/C%23-he-xin.html</link><description># C#核心
+
+![C#核心内容.jpg (294×723)](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23核心内容.jpg)
+
+
+
+![封装继承多态.jpg (1171×310)](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/封装继承多态.jpg)
+
+### 封装
+
+```
+封装
+封装 被定义为'把一个或多个项目封闭在一个物理的或者逻辑的包中'。</description><guid isPermaLink="true">https://aiqingo.github.io/post/C%23-he-xin.html</guid><pubDate>Sun, 04 May 2025 08:27:57 +0000</pubDate></item><item><title>C#基础</title><link>https://aiqingo.github.io/post/C%23-ji-chu.html</link><description># C#基础
 ![C](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23%E5%9F%BA%E7%A1%80%E5%86%85%E5%AE%B9.jpg)
 
 
