@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Fri, 09 May 2025 05:41:08 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#核心</title><link>https://aiqingo.github.io/post/C%23-he-xin.html</link><description># C#核心
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Sat, 10 May 2025 03:39:37 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#核心</title><link>https://aiqingo.github.io/post/C%23-he-xin.html</link><description># C#核心
 
 ![C#核心内容.jpg (294×723)](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23核心内容.jpg)
 
@@ -852,7 +852,7 @@
    #### //char 是用来存储单个字符的变量类型 字符类型
 
    ```
-   char c = '唐';
+   char c = '王';
    ```
 
    ### //string 是字符串类型 用来存储多个字符的 没有上限
@@ -1002,7 +1002,7 @@
    ​      // 先看右侧 再看左侧 把右侧的值赋值给左侧的变量
 
    ```
-   string myName = '唐老狮';
+   string myName = '小学生';
    ```
 
    #### //加 +
@@ -1081,7 +1081,7 @@
     ​      //想要被拼接的内容用占位符替代 {数字} 数字:0~n 依次往后 
 
     ```
-    string str2 = string.Format('我是{0}, 我今年{1}岁, 我想要{2}', '唐老狮', 18, '天天学习，好好向上');
+    string str2 = string.Format('我是{0}, 我今年{1}岁, 我想要{2}', '小王', 18, '天天学习，好好向上');
     ```
 
     
