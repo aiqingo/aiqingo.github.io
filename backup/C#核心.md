@@ -2,7 +2,7 @@
 
 ![C#核心内容.jpg (294×723)](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23核心内容.jpg)
 
-
+![七大原则](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/%E4%B8%83%E5%A4%A7%E5%8E%9F%E5%88%99.jpg)
 
 ![封装继承多态.jpg (1171×310)](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/封装继承多态.jpg)
 
