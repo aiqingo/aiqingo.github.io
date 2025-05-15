@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Thu, 15 May 2025 08:53:17 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#进阶1</title><link>https://aiqingo.github.io/post/C%23-jin-jie-1.html</link><description># C#进阶
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小王的博客</title><link>https://aiqingo.github.io</link><description>为梦想而冲锋</description><copyright>小王的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70639984?s=400&amp;u=fd8cb63c8a4dca59fea2601dc2256dcb9ce86235&amp;v=4</url><title>avatar</title><link>https://aiqingo.github.io</link></image><lastBuildDate>Thu, 15 May 2025 08:59:29 +0000</lastBuildDate><managingEditor>小王的博客</managingEditor><ttl>60</ttl><webMaster>小王的博客</webMaster><item><title>C#进阶</title><link>https://aiqingo.github.io/post/C%23-jin-jie.html</link><description># C#进阶
 
 ![C#进阶](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23%E8%BF%9B%E9%98%B6%E5%86%85%E5%AE%B9.jpg)
 
@@ -7,123 +7,120 @@
 
 ```
 数据结构 
-            //数据结构
-            //数据结构是计算机存储、组织数据的方式（规则）
-            //数据结构是指相互之间存在一种或多种特定关系的数据元素的集合
-            //比如自定义的一个 类 也可以称为一种数据结构 自己定义的数据组合规则
-
-            //不要把数据结构想的太复杂
-            //简单点理解，就是人定义的 存储数据 和 表示数据之间关系 的规则而已
-
-            //常用的数据结构（前辈总结和制定的一些经典规则）
-            //数组、栈、队列、链表、树、图、堆、散列表
+//数据结构
+//数据结构是计算机存储、组织数据的方式（规则）
+//数据结构是指相互之间存在一种或多种特定关系的数据元素的集合
+//比如自定义的一个 类 也可以称为一种数据结构 自己定义的数据组合规则
+//不要把数据结构想的太复杂
+//简单点理解，就是人定义的 存储数据 和 表示数据之间关系 的规则而已
+//常用的数据结构（前辈总结和制定的一些经典规则）
+//数组、栈、队列、链表、树、图、堆、散列表
 ```
 
 ```
 线性表
-            //线性表是一种数据结构，是由n个具有相同特性的数据元素的有限序列
-            //比如数组、ArrayList、Stack、Queue、链表等等
+//线性表是一种数据结构，是由n个具有相同特性的数据元素的有限序列
+//比如数组、ArrayList、Stack、Queue、链表等等
 ```
+
+
+
 1. ### ArrayList
 
    ```
    #region  ArrayList的本质
-               //ArrayList是一个C#为我们封装好的类，
-               //它的本质是一个object类型的数组，
-               //ArrayList类帮助我们实现了很多方法，
-               //比如数组的增删查改
-               #endregion
+   //ArrayList是一个C#为我们封装好的类，
+   //它的本质是一个object类型的数组，
+   //ArrayList类帮助我们实现了很多方法，
+   //比如数组的增删查改
+   #endregion
    
-               #region  申明
-               //需要引用命名空间using System.Collections;
-               ArrayList array = new ArrayList();
-               #endregion
+   #region  申明
+   //需要引用命名空间using System.Collections;
+   ArrayList array = new ArrayList();
+   #endregion
    
-               #region  增删查改
+   #region  增删查改
+   #region 增
+   array.Add(1);
+   array.Add('123');
+   array.Add(true);
+   array.Add(new object());
+   array.Add(new Test());
+   array.Add(1);
+   array.Add(true);
+   ArrayList array2 = new ArrayList();
+   array2.Add(123);
+   //范围增加（批量增加 把另一个list容器里面的内容加到后面）
+   array.AddRange(array2);
+   array.Insert(1, '12345676');
+   Console.WriteLine(array[1]);
+   #endregion
    
-               #region 增
-               array.Add(1);
-               array.Add('123');
-               array.Add(true);
-               array.Add(new object());
-               array.Add(new Test());
-               array.Add(1);
-               array.Add(true);
+   #region 删
+   //移除指定元素 从头找 找到删
+   array.Remove(1);
+   //移除指定位置的元素
+   array.RemoveAt(2);
+   //清空
+   //array.Clear();
    
-               ArrayList array2 = new ArrayList();
-               array2.Add(123);
-               //范围增加（批量增加 把另一个list容器里面的内容加到后面）
-               array.AddRange(array2);
+   #endregion
    
-               array.Insert(1, '12345676');
-               Console.WriteLine(array[1]);
-               #endregion
+   #region 查
+   //得到指定位置的元素
+   Console.WriteLine(array[0]);
    
-               #region 删
+   //查看元素是否存在
+   if( array.Contains('1234') )
+   {
+       Console.WriteLine('存在123');
+   }
    
-               //移除指定元素 从头找 找到删
-               array.Remove(1);
-               //移除指定位置的元素
-               array.RemoveAt(2);
-               //清空
-               //array.Clear();
+   //正向查找元素位置
+   //找到的返回值 是位置 找不到 返回值 是-1
+   int index = array.IndexOf(true);
+   Console.WriteLine(index);
    
-               #endregion
+   Console.WriteLine(array.IndexOf(false));
    
-               #region 查
-               //得到指定位置的元素
-               Console.WriteLine(array[0]);
+   //反向查找元素位置
+   //返回时从头开始的索引数
+   index = array.LastIndexOf(true);
+   Console.WriteLine(index);
+   #endregion
    
-               //查看元素是否存在
-               if( array.Contains('1234') )
-               {
-                   Console.WriteLine('存在123');
-               }
+   #region 改
+   Console.WriteLine(array[0]);
+   array[0] = '999';
+   Console.WriteLine(array[0]);
+   #endregion
    
-               //正向查找元素位置
-               //找到的返回值 是位置 找不到 返回值 是-1
-               int index = array.IndexOf(true);
-               Console.WriteLine(index);
+   #endregion
    
-               Console.WriteLine(array.IndexOf(false));
+   #region 遍历
+   //长度
+   Console.WriteLine(array.Count);
+   //容量
+   //避免产生过多的垃圾
+   Console.WriteLine(array.Capacity);
+   Console.WriteLine('***********************');
+   for (int i = 0; i &lt; array.Count; i++)
+   {
+       Console.WriteLine(array[i]);
+   }
+   Console.WriteLine('***********************');
+   //迭代器遍历
+   foreach (object item in array)
+   {
+       Console.WriteLine(item);
+   }
    
-               //反向查找元素位置
-               //返回时从头开始的索引数
-               index = array.LastIndexOf(true);
-               Console.WriteLine(index);
-               #endregion
+   #endregion
    
-               #region 改
-               Console.WriteLine(array[0]);
-               array[0] = '999';
-               Console.WriteLine(array[0]);
-               #endregion
-   
-               #endregion
-   
-               #region 遍历
-               //长度
-               Console.WriteLine(array.Count);
-               //容量
-               //避免产生过多的垃圾
-               Console.WriteLine(array.Capacity);
-               Console.WriteLine('***********************');
-               for (int i = 0; i &lt; array.Count; i++)
-               {
-                   Console.WriteLine(array[i]);
-               }
-               Console.WriteLine('***********************');
-               //迭代器遍历
-               foreach (object item in array)
-               {
-                   Console.WriteLine(item);
-               }
-   
-               #endregion
-   
-               #region  装箱拆箱
-               //ArrayList本质上是一个可以自动扩容的object数组，
-               //由于用万物之父来存储数据，自然存在装箱拆箱。</description><guid isPermaLink="true">https://aiqingo.github.io/post/C%23-jin-jie-1.html</guid><pubDate>Tue, 13 May 2025 06:24:38 +0000</pubDate></item><item><title>C#核心</title><link>https://aiqingo.github.io/post/C%23-he-xin.html</link><description># C#核心
+   #region  装箱拆箱
+   //ArrayList本质上是一个可以自动扩容的object数组，
+   //由于用万物之父来存储数据，自然存在装箱拆箱。</description><guid isPermaLink="true">https://aiqingo.github.io/post/C%23-jin-jie.html</guid><pubDate>Tue, 13 May 2025 06:24:38 +0000</pubDate></item><item><title>C#核心</title><link>https://aiqingo.github.io/post/C%23-he-xin.html</link><description># C#核心
 
 ![C#核心内容.jpg (294×723)](https://raw.githubusercontent.com/aiqingo/aiqingo.github.io/refs/heads/main/image/C%23核心内容.jpg)
 
