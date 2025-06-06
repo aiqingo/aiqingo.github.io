@@ -43,14 +43,14 @@
    ```
    #regionArrayList的本质
    //ArrayList是一个C#为我们封装好的类，
-   //它的本质是一个object类型的数组，
+   //它的本质是一个object 类型的数组，
    //ArrayList类帮助我们实现了很多方法，
    //比如数组的增删查改
    #endregion
    
    #region申明
    //需要引用命名空间usingSystem.Collections;
-   ArrayListarray=newArrayList();
+   ArrayListarray=new ArrayList();
    #endregion
    
    #region增删查改
@@ -59,12 +59,12 @@
    array.Add(1);
    array.Add('123');
    array.Add(true);
-   array.Add(newobject());
-   array.Add(newTest());
+   array.Add(new object ());
+   array.Add(new Test());
    array.Add(1);
    array.Add(true);
    
-   ArrayListarray2=newArrayList();
+   ArrayListarray2=new ArrayList();
    array2.Add(123);
    //范围增加（批量增加把另一个list容器里面的内容加到后面）
    array.AddRange(array2);
@@ -96,7 +96,7 @@
    
    //正向查找元素位置
    //找到的返回值是位置找不到返回值是-1
-   intindex=array.IndexOf(true);
+   int index=array.IndexOf(true);
    Console.WriteLine(index);
    
    Console.WriteLine(array.IndexOf(false));
@@ -122,13 +122,13 @@
    //避免产生过多的垃圾
    Console.WriteLine(array.Capacity);
    Console.WriteLine('***********************');
-   for(inti=0;i<array.Count;i++)
+   for(int i=0;i<array.Count;i++)
    {
    Console.WriteLine(array[i]);
    }
    Console.WriteLine('***********************');
    //迭代器遍历
-   foreach(objectiteminarray)
+   foreach(object iteminarray)
    {
    Console.WriteLine(item);
    }
@@ -136,7 +136,7 @@
    #endregion
    
    #region装箱拆箱
-   //ArrayList本质上是一个可以自动扩容的object数组，
+   //ArrayList本质上是一个可以自动扩容的object 数组，
    //由于用万物之父来存储数据，自然存在装箱拆箱。">
 <meta property="og:title" content="C#进阶">
 <meta property="og:description" content="# C#进阶
@@ -172,14 +172,14 @@
    ```
    #regionArrayList的本质
    //ArrayList是一个C#为我们封装好的类，
-   //它的本质是一个object类型的数组，
+   //它的本质是一个object 类型的数组，
    //ArrayList类帮助我们实现了很多方法，
    //比如数组的增删查改
    #endregion
    
    #region申明
    //需要引用命名空间usingSystem.Collections;
-   ArrayListarray=newArrayList();
+   ArrayListarray=new ArrayList();
    #endregion
    
    #region增删查改
@@ -188,12 +188,12 @@
    array.Add(1);
    array.Add('123');
    array.Add(true);
-   array.Add(newobject());
-   array.Add(newTest());
+   array.Add(new object ());
+   array.Add(new Test());
    array.Add(1);
    array.Add(true);
    
-   ArrayListarray2=newArrayList();
+   ArrayListarray2=new ArrayList();
    array2.Add(123);
    //范围增加（批量增加把另一个list容器里面的内容加到后面）
    array.AddRange(array2);
@@ -225,7 +225,7 @@
    
    //正向查找元素位置
    //找到的返回值是位置找不到返回值是-1
-   intindex=array.IndexOf(true);
+   int index=array.IndexOf(true);
    Console.WriteLine(index);
    
    Console.WriteLine(array.IndexOf(false));
@@ -251,13 +251,13 @@
    //避免产生过多的垃圾
    Console.WriteLine(array.Capacity);
    Console.WriteLine('***********************');
-   for(inti=0;i<array.Count;i++)
+   for(int i=0;i<array.Count;i++)
    {
    Console.WriteLine(array[i]);
    }
    Console.WriteLine('***********************');
    //迭代器遍历
-   foreach(objectiteminarray)
+   foreach(object iteminarray)
    {
    Console.WriteLine(item);
    }
@@ -265,7 +265,7 @@
    #endregion
    
    #region装箱拆箱
-   //ArrayList本质上是一个可以自动扩容的object数组，
+   //ArrayList本质上是一个可以自动扩容的object 数组，
    //由于用万物之父来存储数据，自然存在装箱拆箱。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://aiqingo.github.io/post/C%23-jin-jie.html">
@@ -361,14 +361,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3>ArrayList</h3>
 <pre class="notranslate"><code class="notranslate">#regionArrayList的本质
 //ArrayList是一个C#为我们封装好的类，
-//它的本质是一个object类型的数组，
+//它的本质是一个object 类型的数组，
 //ArrayList类帮助我们实现了很多方法，
 //比如数组的增删查改
 #endregion
 
 #region申明
 //需要引用命名空间usingSystem.Collections;
-ArrayListarray=newArrayList();
+ArrayListarray=new ArrayList();
 #endregion
 
 #region增删查改
@@ -377,12 +377,12 @@ ArrayListarray=newArrayList();
 array.Add(1);
 array.Add("123");
 array.Add(true);
-array.Add(newobject());
-array.Add(newTest());
+array.Add(new object ());
+array.Add(new Test());
 array.Add(1);
 array.Add(true);
 
-ArrayListarray2=newArrayList();
+ArrayListarray2=new ArrayList();
 array2.Add(123);
 //范围增加（批量增加把另一个list容器里面的内容加到后面）
 array.AddRange(array2);
@@ -414,7 +414,7 @@ Console.WriteLine("存在123");
 
 //正向查找元素位置
 //找到的返回值是位置找不到返回值是-1
-intindex=array.IndexOf(true);
+int index=array.IndexOf(true);
 Console.WriteLine(index);
 
 Console.WriteLine(array.IndexOf(false));
@@ -440,13 +440,13 @@ Console.WriteLine(array.Count);
 //避免产生过多的垃圾
 Console.WriteLine(array.Capacity);
 Console.WriteLine("***********************");
-for(inti=0;i&lt;array.Count;i++)
+for(int i=0;i&lt;array.Count;i++)
 {
 Console.WriteLine(array[i]);
 }
 Console.WriteLine("***********************");
 //迭代器遍历
-foreach(objectiteminarray)
+foreach(object iteminarray)
 {
 Console.WriteLine(item);
 }
@@ -454,14 +454,14 @@ Console.WriteLine(item);
 #endregion
 
 #region装箱拆箱
-//ArrayList本质上是一个可以自动扩容的object数组，
+//ArrayList本质上是一个可以自动扩容的object 数组，
 //由于用万物之父来存储数据，自然存在装箱拆箱。
 //当往其中进行值类型存储时就是在装箱，当将值类型对象取出来转换使用时，就存在拆箱。
 //所以ArrayList尽量少用，之后我们会学习更好的数据容器。
 
-intk=1;
+int k=1;
 array[0]=k;//装箱
-k=(int)array[0];//拆箱
+k=(int )array[0];//拆箱
 #endregion
 </code></pre>
 </li>
@@ -469,7 +469,7 @@ k=(int)array[0];//拆箱
 <h3>Stack栈</h3>
 <pre class="notranslate"><code class="notranslate">#regionStack的本质
 //Stack（栈）是一个C#为我们封装好的类
-//它的本质也是object[]数组，只是封装了特殊的存储规则
+//它的本质也是object []数组，只是封装了特殊的存储规则
 
 //Stack是栈存储容器，栈是一种先进后出的数据结构
 //先存入的数据后获取，后存入的数据先获取
@@ -478,7 +478,7 @@ k=(int)array[0];//拆箱
 
 #region申明
 //需要引用命名空间System.Collections
-Stackstack=newStack();
+Stackstack=new Stack();
 #endregion
 
 #region增取查改
@@ -489,7 +489,7 @@ stack.Push(1);
 stack.Push("123");
 stack.Push(true);
 stack.Push(1.2f);
-stack.Push(newTest());
+stack.Push(new Test());
 
 #endregion
 
@@ -497,7 +497,7 @@ stack.Push(newTest());
 //栈中不存在删除的概念
 //只有取的概念
 //弹栈
-objectv=stack.Pop();
+object v=stack.Pop();
 Console.WriteLine(v);
 
 v=stack.Pop();
@@ -538,16 +538,16 @@ Console.WriteLine(stack.Count);
 
 //2.用foreach遍历
 //而且遍历出来的顺序也是从栈顶到栈底
-foreach(objectiteminstack)
+foreach(object iteminstack)
 {
 Console.WriteLine(item);
 }
 
 //3.还有一种遍历方式
-//将栈转换为object数组
+//将栈转换为object 数组
 //遍历出来的顺序也是从栈顶到栈底
-object[]array=stack.ToArray();
-for(inti=0;i&lt;array.Length;i++)
+object []array=stack.ToArray();
+for(int i=0;i&lt;array.Length;i++)
 {
 Console.WriteLine(array[i]);
 }
@@ -556,7 +556,7 @@ Console.WriteLine(stack.Count);
 //4.循环弹栈
 while(stack.Count&gt;0)
 {
-objecto=stack.Pop();
+object o=stack.Pop();
 Console.WriteLine(o);
 }
 Console.WriteLine(stack.Count);
@@ -570,14 +570,14 @@ Console.WriteLine(stack.Count);
 
 
 泛型栈
-Stack&lt;int&gt;stack=newStack&lt;int&gt;();
+Stack&lt;int &gt;stack=new Stack&lt;int &gt;();
 </code></pre>
 </li>
 <li>
 <h3>Queue队列</h3>
 <pre class="notranslate"><code class="notranslate">#region申明
 //需要引用命名空间System.Collections
-Queuequeue=newQueue();
+Queuequeue=new Queue();
 #endregion
 
 #region增取查改
@@ -586,13 +586,13 @@ Queuequeue=newQueue();
 queue.Enqueue(1);
 queue.Enqueue("123");
 queue.Enqueue(1.4f);
-queue.Enqueue(newTest());
+queue.Enqueue(new Test());
 #endregion
 
 #region取
 //队列中不存在删除的概念
 //只有取的概念取出先加入的对象
-objectv=queue.Dequeue();
+object v=queue.Dequeue();
 Console.WriteLine(v);
 v=queue.Dequeue();
 Console.WriteLine(v);
@@ -629,14 +629,14 @@ queue.Enqueue(3);
 //1.长度
 Console.WriteLine(queue.Count);
 //2.用foreach遍历
-foreach(objectiteminqueue)
+foreach(object iteminqueue)
 {
 Console.WriteLine(item);
 }
 //3.还有一种遍历方式
-//将队列转换为object数组
-object[]array=queue.ToArray();
-for(inti=0;i&lt;array.Length;i++)
+//将队列转换为object 数组
+object []array=queue.ToArray();
+for(int i=0;i&lt;array.Length;i++)
 {
 Console.WriteLine(array[i]);
 }
@@ -644,7 +644,7 @@ Console.WriteLine(array[i]);
 //4.循环出列
 while(queue.Count&gt;0)
 {
-objecto=queue.Dequeue();
+object o=queue.Dequeue();
 Console.WriteLine(o);
 }
 Console.WriteLine(queue.Count);
@@ -657,20 +657,20 @@ Console.WriteLine(queue.Count);
 #endregion
 
 泛型队列
-Queue&lt;object&gt;queue=newQueue&lt;object&gt;();
+Queue&lt;object &gt;queue=new Queue&lt;object &gt;();
 </code></pre>
 </li>
 <li>
 <h3>Hashtable</h3>
 <pre class="notranslate"><code class="notranslate">#regionHashtalbe的本质
-//Hashtable（又称散列表）是基于键的哈希代码组织起来的键/值对
+//Hashtable （又称散列表）是基于键的哈希代码组织起来的键/值对
 //它的主要作用是提高数据查询的效率
 //使用键来访问集合中的元素
 #endregion
 
 #region申明
 //需要引用命名空间System.Collections
-Hashtablehashtable=newHashtable();
+Hashtable hashtable=new Hashtable ();
 #endregion
 
 #region增删查改
@@ -736,14 +736,14 @@ Console.WriteLine(hashtable[1]);
 Console.WriteLine(hashtable.Count);
 
 //1.遍历所有键
-foreach(objectiteminhashtable.Keys)
+foreach(object iteminhashtable.Keys)
 {
 Console.WriteLine("键："+item);
 Console.WriteLine("值："+hashtable[item]);
 }
 
 //2.遍历所有值
-foreach(objectiteminhashtable.Values)
+foreach(object iteminhashtable.Values)
 {
 Console.WriteLine("值："+item);
 }
@@ -785,8 +785,8 @@ flag=myEnumerator.MoveNext();
 #region泛型分类
 //泛型类和泛型接口
 //基本语法：
-//class类名&lt;泛型占位字母&gt;
-//interface接口名&lt;泛型占位字母&gt;
+//class 类名&lt;泛型占位字母&gt;
+//int erface接口名&lt;泛型占位字母&gt;
 
 //泛型函数
 //基本语法：函数名&lt;泛型占位字母&gt;(参数列表)
@@ -796,23 +796,23 @@ flag=myEnumerator.MoveNext();
 
 #region泛型类和接口
 
-classTestClass&lt;T&gt;
+class TestClass&lt;T&gt;
 {
-publicTvalue;
+public Tvalue;
 }
 
-classTestClass2&lt;T1,T2,K,M,LL,Key,Value&gt;
+class TestClass2&lt;T1,T2,K,M,LL,Key,Value&gt;
 {
-publicT1value1;
-publicT2value2;
-publicKvalue3;
-publicMvalue4;
-publicLLvalue5;
-publicKeyvalue6;
-publicValuevalue7;
+public T1value1;
+public T2value2;
+public Kvalue3;
+public Mvalue4;
+public LLvalue5;
+public Keyvalue6;
+public Valuevalue7;
 }
 
-interfaceTestInterface&lt;T&gt;
+int erfaceTestInterface&lt;T&gt;
 {
 TValue
 {
@@ -821,9 +821,9 @@ set;
 }
 }
 
-classTest:TestInterface&lt;int&gt;
+class Test:TestInterface&lt;int &gt;
 {
-publicintValue{get=&gt;thrownewNotImplementedException();set=&gt;thrownewNotImplementedException();}
+public int Value{get=&gt;thrownew NotImplementedException();set=&gt;thrownew NotImplementedException();}
 }
 
 #endregion
@@ -831,43 +831,43 @@ publicintValue{get=&gt;thrownewNotImplementedException();set=&gt;thrownewNotImpl
 #region泛型方法
 //1.普通类中的泛型方法
 
-classTest2
+class Test2
 {
-publicvoidTestFun&lt;T&gt;(Tvalue)
+public void TestFun&lt;T&gt;(Tvalue)
 {
 Console.WriteLine(value);
 }
 
-publicvoidTestFun&lt;T&gt;()
+public void TestFun&lt;T&gt;()
 {
 //用泛型类型在里面做一些逻辑处理
 Tt=default(T);
 }
 
-publicTTestFun&lt;T&gt;(stringv)
+public TTestFun&lt;T&gt;(stringv)
 {
 returndefault(T);
 }
 
-publicvoidTestFun&lt;T,K,M&gt;(Tt,Kk,Mm)
+public void TestFun&lt;T,K,M&gt;(Tt,Kk,Mm)
 {
 
 }
 }
 
 //2.泛型类中的泛型方法
-classTest2&lt;T&gt;
+class Test2&lt;T&gt;
 {
-publicTvalue;
+public Tvalue;
 
-publicvoidTestFun&lt;K&gt;(Kk)
+public void TestFun&lt;K&gt;(Kk)
 {
 Console.WriteLine(k);
 }
 
 //这个不叫泛型方法因为T是泛型类申明的时候就指定在使用这个函数的时候
 //我们不能再去动态的变化了
-publicvoidTestFun(Tt)
+public void TestFun(Tt)
 {
 
 }
@@ -879,16 +879,16 @@ publicvoidTestFun(Tt)
 //1.不同类型对象的相同逻辑处理就可以选择泛型
 //2.使用泛型可以一定程度避免装箱拆箱
 //举例：优化ArrayList
-classArrayList&lt;T&gt;
+class ArrayList&lt;T&gt;
 {
 privateT[]array;
 
-publicvoidAdd(Tvalue)
+public void Add(Tvalue)
 {
 
 }
 
-publicvoidRemove(Tvalue)
+public void Remove(Tvalue)
 {
 
 }
@@ -911,8 +911,8 @@ publicvoidRemove(Tvalue)
 //关键字：where
 //泛型约束一共有6种
 //1.值类型where泛型字母:struct
-//2.引用类型where泛型字母:class
-//3.存在无参公共构造函数where泛型字母:new()
+//2.引用类型where泛型字母:class 
+//3.存在无参公共构造函数where泛型字母:new ()
 //4.某个类本身或者其派生类where泛型字母:类名
 //5.某个接口的派生类型where泛型字母:接口名
 //6.另一个泛型类型本身或者派生类型where泛型字母:另一个泛型字母
@@ -923,11 +923,11 @@ publicvoidRemove(Tvalue)
 #region各泛型约束讲解
 
 #region值类型约束
-classTest1&lt;T&gt;whereT:struct
+class Test1&lt;T&gt;whereT:struct
 {
-publicTvalue;
+public Tvalue;
 
-publicvoidTestFun&lt;K&gt;(Kv)whereK:struct
+public void TestFun&lt;K&gt;(Kv)whereK:struct
 {
 
 }
@@ -935,11 +935,11 @@ publicvoidTestFun&lt;K&gt;(Kv)whereK:struct
 #endregion
 
 #region引用类型约束
-classTest2&lt;T&gt;whereT:class
+class Test2&lt;T&gt;whereT:class 
 {
-publicTvalue;
+public Tvalue;
 
-publicvoidTestFun&lt;K&gt;(Kk)whereK:class
+public void TestFun&lt;K&gt;(Kk)whereK:class 
 {
 
 }
@@ -947,27 +947,27 @@ publicvoidTestFun&lt;K&gt;(Kk)whereK:class
 #endregion
 
 #region公共无参构造约束
-classTest3&lt;T&gt;whereT:new()
+class Test3&lt;T&gt;whereT:new ()
 {
-publicTvalue;
+public Tvalue;
 
-publicvoidTestFun&lt;K&gt;(Kk)whereK:new()
-{
-
-}
-}
-
-classTest1
-{
-publicTest1()
+public void TestFun&lt;K&gt;(Kk)whereK:new ()
 {
 
 }
 }
 
-classTest2
+class Test1
 {
-publicTest2(inta)
+public Test1()
+{
+
+}
+}
+
+class Test2
+{
+public Test2(int a)
 {
 
 }
@@ -975,43 +975,43 @@ publicTest2(inta)
 #endregion
 
 #region类约束
-classTest4&lt;T&gt;whereT:Test1
+class Test4&lt;T&gt;whereT:Test1
 {
-publicTvalue;
+public Tvalue;
 
-publicvoidTestFun&lt;K&gt;(Kk)whereK:Test1
+public void TestFun&lt;K&gt;(Kk)whereK:Test1
 {
 
 }
 }
 
-classTest3:Test1
+class Test3:Test1
 {
 
 }
 #endregion
 
 #region接口约束
-interfaceIFly
+int erfaceIFly
 {
 
 }
 
-interfaceIMove:IFly
+int erfaceIMove:IFly
 {
 
 }
 
-classTest4:IFly
+class Test4:IFly
 {
 
 }
 
-classTest5&lt;T&gt;whereT:IFly
+class Test5&lt;T&gt;whereT:IFly
 {
-publicTvalue;
+public Tvalue;
 
-publicvoidTestFun&lt;K&gt;(Kk)whereK:IFly
+public void TestFun&lt;K&gt;(Kk)whereK:IFly
 {
 
 }
@@ -1019,11 +1019,11 @@ publicvoidTestFun&lt;K&gt;(Kk)whereK:IFly
 #endregion
 
 #region另一个泛型约束
-classTest6&lt;T,U&gt;whereT:U
+class Test6&lt;T,U&gt;whereT:U
 {
-publicTvalue;
+public Tvalue;
 
-publicvoidTestFun&lt;K,V&gt;(Kk)whereK:V
+public void TestFun&lt;K,V&gt;(Kk)whereK:V
 {
 
 }
@@ -1033,14 +1033,14 @@ publicvoidTestFun&lt;K,V&gt;(Kk)whereK:V
 #endregion
 
 #region约束的组合使用
-classTest7&lt;T&gt;whereT:class,new()
+class Test7&lt;T&gt;whereT:class ,new ()
 {
 
 }
 #endregion
 
 #region多个泛型有约束
-classTest8&lt;T,K&gt;whereT:class,new()whereK:struct
+class Test8&lt;T,K&gt;whereT:class ,new ()whereK:struct
 {
 
 }
@@ -1048,9 +1048,9 @@ classTest8&lt;T,K&gt;whereT:class,new()whereK:struct
 
 #region总结
 //泛型约束：让类型有一定限制
-//class
+//class 
 //struct
-//new()
+//new ()
 //类名
 //接口名
 //另一个泛型字母
@@ -1073,9 +1073,9 @@ classTest8&lt;T,K&gt;whereT:class,new()whereK:struct
 #region申明
 //需要引用命名空间
 //usingSystem.Collections.Generic
-List&lt;int&gt;list=newList&lt;int&gt;();
-List&lt;string&gt;list2=newList&lt;string&gt;();
-List&lt;bool&gt;list3=newList&lt;bool&gt;();
+List&lt;int &gt;list=new List&lt;int &gt;();
+List&lt;string&gt;list2=new List&lt;string&gt;();
+List&lt;bool&gt;list3=new List&lt;bool&gt;();
 #endregion
 
 #region增删查改
@@ -1088,7 +1088,7 @@ list.Add(4);
 
 list2.Add("123");
 
-List&lt;string&gt;listStr=newList&lt;string&gt;();
+List&lt;string&gt;listStr=new List&lt;string&gt;();
 listStr.Add("123");
 list2.AddRange(listStr);
 
@@ -1121,7 +1121,7 @@ Console.WriteLine("存在元素1");
 }
 //3.正向查找元素位置
 //找到返回位置找不到返回-1
-intindex=list.IndexOf(5);
+int index=list.IndexOf(5);
 Console.WriteLine(index);
 //4.反向查找元素位置
 //找到返回位置找不到返回-1
@@ -1144,12 +1144,12 @@ Console.WriteLine(list.Count);
 //避免产生垃圾
 Console.WriteLine(list.Capacity);
 Console.WriteLine("**********************");
-for(inti=0;i&lt;list.Count;i++)
+for(int i=0;i&lt;list.Count;i++)
 {
 Console.WriteLine(list[i]);
 }
 Console.WriteLine("**********************");
-foreach(intiteminlist)
+foreach(int iteminlist)
 {
 Console.WriteLine(item);
 }
@@ -1160,14 +1160,14 @@ Console.WriteLine(item);
 <li>
 <h3>Dictionary</h3>
 <pre class="notranslate"><code class="notranslate">#regionDictionary的本质
-//可以将Dictionary理解为拥有泛型的Hashtable
+//可以将Dictionary理解为拥有泛型的Hashtable 
 //它也是基于键的哈希代码组织起来的键/值对
-//键值对类型从Hashtable的object变为了可以自己制定的泛型
+//键值对类型从Hashtable 的object 变为了可以自己制定的泛型
 #endregion
 
 #region申明
 //需要引用命名空间usingSystem.Collections.Generic
-Dictionary&lt;int,string&gt;dictionary=newDictionary&lt;int,string&gt;();
+Dictionary&lt;int ,string&gt;dictionary=new Dictionary&lt;int ,string&gt;();
 #endregion
 
 #region增删查改
@@ -1226,7 +1226,7 @@ Console.WriteLine(dictionary[1]);
 Console.WriteLine("**************");
 Console.WriteLine(dictionary.Count);
 //1.遍历所有键
-foreach(intitemindictionary.Keys)
+foreach(int itemindictionary.Keys)
 {
 Console.WriteLine(item);
 Console.WriteLine(dictionary[item]);
@@ -1239,7 +1239,7 @@ Console.WriteLine(item);
 }
 //3.键值对一起遍历
 Console.WriteLine("**************");
-foreach(KeyValuePair&lt;int,string&gt;itemindictionary)
+foreach(KeyValuePair&lt;int ,string&gt;itemindictionary)
 {
 Console.WriteLine("键："+item.Key+"值："+item.Value);
 }
@@ -1266,13 +1266,13 @@ Console.WriteLine("键："+item.Key+"值："+item.Value);
 ///单向链表节点
 ///&lt;/summary&gt;
 ///&lt;typeparamname="T"&gt;&lt;/typeparam&gt;
-classLinkedNode&lt;T&gt;
+class LinkedNode&lt;T&gt;
 {
-publicTvalue;
+public Tvalue;
 //这个存储下一个元素是谁相当于钩子
-publicLinkedNode&lt;T&gt;nextNode;
+public LinkedNode&lt;T&gt;nextNode;
 
-publicLinkedNode(Tvalue)
+public LinkedNode(Tvalue)
 {
 this.value=value;
 }
@@ -1282,15 +1282,15 @@ this.value=value;
 ///单向链表类管理节点管理添加等等
 ///&lt;/summary&gt;
 ///&lt;typeparamname="T"&gt;&lt;/typeparam&gt;
-classLindedList&lt;T&gt;
+class LindedList&lt;T&gt;
 {
-publicLinkedNode&lt;T&gt;head;
-publicLinkedNode&lt;T&gt;last;
+public LinkedNode&lt;T&gt;head;
+public LinkedNode&lt;T&gt;last;
 
-publicvoidAdd(Tvalue)
+public void Add(Tvalue)
 {
-//添加节点必然是new一个新的节点
-LinkedNode&lt;T&gt;node=newLinkedNode&lt;T&gt;(value);
+//添加节点必然是new 一个新的节点
+LinkedNode&lt;T&gt;node=new LinkedNode&lt;T&gt;(value);
 if(head==null)
 {
 head=node;
@@ -1303,7 +1303,7 @@ last=node;
 }
 }
 
-publicvoidRemove(Tvalue)
+public void Remove(Tvalue)
 {
 if(head==null)
 {
@@ -1354,8 +1354,8 @@ break;
 #region申明
 //需要引用命名空间
 //usingSystem.Collections.Generic
-LinkedList&lt;int&gt;linkedList=newLinkedList&lt;int&gt;();
-LinkedList&lt;string&gt;linkedList2=newLinkedList&lt;string&gt;();
+LinkedList&lt;int &gt;linkedList=new LinkedList&lt;int &gt;();
+LinkedList&lt;string&gt;linkedList2=new LinkedList&lt;string&gt;();
 //链表对象需要掌握两个类
 //一个是链表本身一个是链表节点类LinkedListNode
 #endregion
@@ -1371,7 +1371,7 @@ linkedList.AddFirst(20);
 
 //3.在某一个节点之后添加一个节点
 //要指定节点先得得到一个节点
-LinkedListNode&lt;int&gt;n=linkedList.Find(20);
+LinkedListNode&lt;int &gt;n=linkedList.Find(20);
 linkedList.AddAfter(n,15);
 //4.在某一个节点之前添加一个节点
 //要指定节点先得得到一个节点
@@ -1397,13 +1397,13 @@ linkedList.AddLast(4);
 
 #region查
 //1.头节点
-LinkedListNode&lt;int&gt;first=linkedList.First;
+LinkedListNode&lt;int &gt;first=linkedList.First;
 //2.尾节点
-LinkedListNode&lt;int&gt;last=linkedList.Last;
+LinkedListNode&lt;int &gt;last=linkedList.Last;
 //3.找到指定值的节点
 //无法直接通过下标获取中间元素
 //只有遍历查找指定位置元素
-LinkedListNode&lt;int&gt;node=linkedList.Find(3);
+LinkedListNode&lt;int &gt;node=linkedList.Find(3);
 Console.WriteLine(node.Value);
 node=linkedList.Find(5);
 //4.判断是否存在
@@ -1424,7 +1424,7 @@ Console.WriteLine(linkedList.First.Value);
 
 #region遍历
 //1.foreach遍历
-foreach(intiteminlinkedList)
+foreach(int iteminlinkedList)
 {
 Console.WriteLine(item);
 }
@@ -1432,7 +1432,7 @@ Console.WriteLine(item);
 //2.通过节点遍历
 //从头到尾
 Console.WriteLine("&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;");
-LinkedListNode&lt;int&gt;nowNode=linkedList.First;
+LinkedListNode&lt;int &gt;nowNode=linkedList.First;
 while(nowNode!=null)
 {
 Console.WriteLine(nowNode.Value);
@@ -1469,8 +1469,8 @@ nowNode=nowNode.Previous;
 #region泛型栈和队列
 //命名空间：usingSystem.Collections.Generic;
 //使用上和之前的Stack和Queue一模一样
-Stack&lt;int&gt;stack=newStack&lt;int&gt;();
-Queue&lt;object&gt;queue=newQueue&lt;object&gt;();
+Stack&lt;int &gt;stack=new Stack&lt;int &gt;();
+Queue&lt;object &gt;queue=new Queue&lt;object &gt;();
 #endregion
 </code></pre>
 </li>
@@ -1490,20 +1490,20 @@ namespaceLesson12_委托
 //关键字：delegate
 //语法：访问修饰符delegate返回值委托名(参数列表);
 //写在哪里？
-//可以申明在namespace和class语句块中
+//可以申明在namespace和class 语句块中
 //更多的写在namespace中
 //简单记忆委托语法就是函数申明语法前面加一个delegate关键字
 #endregion
 #region定义自定义委托
-//访问修饰默认不写为public在别的命名空间中也能使用
+//访问修饰默认不写为public 在别的命名空间中也能使用
 //private其它命名空间就不能用了
-//一般使用public
+//一般使用public 
 //申明了一个可以用来存储无参无返回值函数的容器
 //这里只是定义了规则并没有使用
-delegatevoidMyFun();
+delegatevoid MyFun();
 //委托规则的申明是不能重名（同一语句块中）
-//表示用来装载或传递返回值为int有一个int参数的函数的委托容器规则
-publicdelegateintMyFun2(inta);
+//表示用来装载或传递返回值为int 有一个int 参数的函数的委托容器规则
+public delegateint MyFun2(int a);
 //委托是支持泛型的可以让返回值和参数可变更方便我们的使用
 delegateTMyFun3&lt;T,K&gt;(Tv,Kk);
 #endregion
@@ -1512,15 +1512,15 @@ delegateTMyFun3&lt;T,K&gt;(Tv,Kk);
 //委托常用在：
 //1.作为类的成员
 //2.作为函数的参数
-classTest
+class Test
 {
-publicMyFunfun;
-publicMyFun2fun2;
-publicActionaction;
-publicvoidTestFun(MyFunfun,MyFun2fun2)
+public MyFunfun;
+public MyFun2fun2;
+public Actionaction;
+public void TestFun(MyFunfun,MyFun2fun2)
 {
 //先处理一些别的逻辑当这些逻辑处理完了再执行传入的函数
-inti=1;
+int i=1;
 i*=2;
 i+=2;
 //fun();
@@ -1529,14 +1529,14 @@ i+=2;
 //this.fun2=fun2;
 }
 #region增委托变量可以存储多个函数(多播委托)
-publicvoidAddFun(MyFunfun,MyFun2fun2)
+public void AddFun(MyFunfun,MyFun2fun2)
 {
 this.fun+=fun;
 this.fun2+=fun2;
 }
 #endregion
 #region删
-publicvoidRemoveFun(MyFunfun,MyFun2fun2)
+public void RemoveFun(MyFunfun,MyFun2fun2)
 {
 //this.fun=this.fun-fun;
 this.fun-=fun;
@@ -1548,7 +1548,7 @@ this.fun2-=fun2;
 ------------------
 Console.WriteLine("委托");
 //专门用来装载函数的容器
-MyFunf=newMyFun(Fun);
+MyFunf=new MyFun(Fun);
 Console.WriteLine("1");
 Console.WriteLine("2");
 Console.WriteLine("3");
@@ -1560,9 +1560,9 @@ MyFunf2=Fun;
 f2();
 MyFun2f3=Fun2;
 Console.WriteLine(f3(1));
-MyFun2f4=newMyFun2(Fun2);
+MyFun2f4=new MyFun2(Fun2);
 Console.WriteLine(f4.Invoke(3));
-Testt=newTest();
+Testt=new Test();
 t.TestFun(Fun,Fun2);
 Console.WriteLine("***************");
 //如何用委托存储多个函数
@@ -1590,20 +1590,20 @@ action+=Fun3;
 action();
 //可以指定返回值类型的泛型委托
 Func&lt;string&gt;funcString=Fun4;
-Func&lt;int&gt;funcInt=Fun5;
+Func&lt;int &gt;funcInt=Fun5;
 //可以传n个参数的系统提供了1到16个参数的委托直接用就行了
-Action&lt;int,string&gt;action2=Fun6;
+Action&lt;int ,string&gt;action2=Fun6;
 //可以穿n个参数的并且有返回值的系统也提供了16个委托
-Func&lt;int,int&gt;func2=Fun2;
+Func&lt;int ,int &gt;func2=Fun2;
 #endregion
 }
 
-staticvoidFun(){}
-staticvoidFun3(){}
+staticvoid Fun(){}
+staticvoid Fun3(){}
 staticstringFun4(){}
-staticintFun5(){}
-staticvoidFun6(inti,strings){}
-		staticintFun2(intvalue){}
+staticint Fun5(){}
+staticvoid Fun6(int i,strings){}
+		staticint Fun2(int value){}
 }
 
 //总结
@@ -1636,14 +1636,14 @@ staticvoidFun6(inti,strings){}
 //2.不能再类外部调用
 //注意：
 //它只能作为成员存在于类和接口以及结构体中
-classTest
+class Test
 {
 //委托成员变量用于存储函数的
-publicActionmyFun;
+public ActionmyFun;
 //事件成员变量用于存储函数的
-publiceventActionmyEvent;
+public eventActionmyEvent;
 
-publicTest()
+public Test()
 {
 //事件的使用和委托一模一样只是有些细微的区别
 myFun=TestFun;
@@ -1661,7 +1661,7 @@ myEvent.Invoke();
 myEvent=null;
 }
 
-publicvoidDoEvent()
+public void DoEvent()
 {
 if(myEvent!=null)
 {
@@ -1669,7 +1669,7 @@ myEvent();
 }
 }
 
-publicvoidTestFun()
+public void TestFun()
 {
 Console.WriteLine("123");
 }
@@ -1682,13 +1682,13 @@ Console.WriteLine("123");
 //3.事件相当于对委托进行了一次封装让其更加安全
 #endregion
 
-classProgram
+class Program
 {
-staticvoidMain(string[]args)
+staticvoid Main(string[]args)
 {
 Console.WriteLine("事件");
 
-Testt=newTest();
+Testt=new Test();
 //委托可以在外部赋值
 t.myFun=null;
 t.myFun=TestFun;
@@ -1714,7 +1714,7 @@ Actiona=TestFun;
 //eventActionae=TestFun;
 }
 
-staticvoidTestFun()
+staticvoid TestFun()
 {
 
 }
@@ -1731,9 +1731,9 @@ staticvoidTestFun()
 </li>
 <li>
 <h3>匿名函数</h3>
-<pre class="notranslate"><code class="notranslate">classProgram
+<pre class="notranslate"><code class="notranslate">class Program
 {
-staticvoidMain(string[]args)
+staticvoid Main(string[]args)
 {
 Console.WriteLine("匿名函数");
 #region什么是匿名函数
@@ -1761,7 +1761,7 @@ Console.WriteLine("匿名函数逻辑");
 };
 a();
 //2.有参
-Action&lt;int,string&gt;b=delegate(inta,stringb)
+Action&lt;int ,string&gt;b=delegate(int a,stringb)
 {
 Console.WriteLine(a);
 Console.WriteLine(b);
@@ -1774,7 +1774,7 @@ return"123123";
 };
 Console.WriteLine(c());
 //4.一般情况会作为函数参数传递或者作为函数返回值
-Testt=newTest();
+Testt=new Test();
 Actionac=delegate()
 {
 Console.WriteLine("随参数传入的匿名函数逻辑");
@@ -1812,25 +1812,25 @@ ac3=null;
 //ac3();
 #endregion
 }
-staticvoidTestFun(){}
+staticvoid TestFun(){}
 }
-classTest
+class Test
 {
-publicActionaction;
+public Actionaction;
 //作为参数传递时
-publicvoidDosomthing(inta,Actionfun)
+public void Dosomthing(int a,Actionfun)
 {
 Console.WriteLine(a);
 fun();
 }
 //作为返回值
-publicActionGetFun()
+public ActionGetFun()
 {
 returndelegate(){
 Console.WriteLine("函数内部返回的一个匿名函数逻辑");
 };
 }
-publicvoidTestTTTT(){}
+public void TestTTTT(){}
 }
 //总结
 //匿名函数就是没有名字的函数
@@ -1870,19 +1870,19 @@ Console.WriteLine("无参无返回值的lambad表达式");
 };
 a();
 //2.有参
-Action&lt;int&gt;a2=(intvalue)=&gt;
+Action&lt;int &gt;a2=(int value)=&gt;
 {
 Console.WriteLine("有参数Lambad表达式{0}",value);
 };
 a2(100);
 //3.甚至参数类型都可以省略参数类型和委托或事件容器一致
-Action&lt;int&gt;a3=(value)=&gt;
+Action&lt;int &gt;a3=(value)=&gt;
 {
 Console.WriteLine("省略参数类型的写法{0}",value);
 };
 a3(200);
 //4.有返回值
-Func&lt;string,int&gt;a4=(value)=&gt;
+Func&lt;string,int &gt;a4=(value)=&gt;
 {
 Console.WriteLine("有返回值有参数的那么大表达式{0}",value);
 return1;
@@ -1897,13 +1897,13 @@ Console.WriteLine(a4("123123"));
 //注意：
 //该变量提供的值并非变量创建时的值，而是在父函数范围内的最终值。
 
-classTest
+class Test
 {
-publiceventActionaction;
+public eventActionaction;
 
-publicTest()
+public Test()
 {
-intvalue=10;
+int value=10;
 //这里就形成了闭包
 //因为当构造函数执行完毕时其中申明的临时变量value的声明周期被改变了
 action=()=&gt;
@@ -1911,10 +1911,10 @@ action=()=&gt;
 Console.WriteLine(value);
 };
 
-for(inti=0;i&lt;10;i++)
+for(int i=0;i&lt;10;i++)
 {
 //此index非彼index
-intindex=i;
+int index=i;
 action+=()=&gt;
 {
 Console.WriteLine(index);
@@ -1922,7 +1922,7 @@ Console.WriteLine(index);
 }
 }
 
-publicvoidDoSomthing()
+public void DoSomthing()
 {
 action();
 }
@@ -1965,13 +1965,13 @@ usingSystem.Diagnostics.CodeAnalysis;
 
 namespaceLesson16_List排序
 {
-classItem:IComparable&lt;Item&gt;{
-publicintmoney;
-publicItem(intmoney)
+class Item:IComparable&lt;Item&gt;{
+public int money;
+public Item(int money)
 {
 this.money=money;
 }
-publicintCompareTo(Itemother){
+public int CompareTo(Itemother){
 //返回值的含义
 //小于0：
 //放在传入对象的前面
@@ -1986,46 +1986,46 @@ if(this.money&gt;other.money){return-1;}
 else{return1;}
 }
 }
-classShopItem{
-publicintid;
-publicShopItem(intid){this.id=id;}
+class ShopItem{
+public int id;
+public ShopItem(int id){this.id=id;}
 }
-classProgram{staticvoidMain(string[]args){
+class Program{staticvoid Main(string[]args){
 #regionList自带排序方法
-List&lt;int&gt;list=newList&lt;int&gt;();
+List&lt;int &gt;list=new List&lt;int &gt;();
 list.Add(3);
 list.Add(2);
 list.Add(6);
 list.Add(1);
 list.Add(4);
 list.Add(5);
-for(inti=0;i&lt;list.Count;i++){Console.WriteLine(list[i]);}
+for(int i=0;i&lt;list.Count;i++){Console.WriteLine(list[i]);}
 //list提供了排序方法
 list.Sort();
 Console.WriteLine("**************");
-for(inti=0;i&lt;list.Count;i++){Console.WriteLine(list[i]);}
+for(int i=0;i&lt;list.Count;i++){Console.WriteLine(list[i]);}
 //ArrayList中也有Sort排序方法
 #endregion
 #region自定义类的排序
-List&lt;Item&gt;itemList=newList&lt;Item&gt;();
-itemList.Add(newItem(45));
-itemList.Add(newItem(10));
-itemList.Add(newItem(99));
-itemList.Add(newItem(24));
-itemList.Add(newItem(100));
-itemList.Add(newItem(12));
+List&lt;Item&gt;itemList=new List&lt;Item&gt;();
+itemList.Add(new Item(45));
+itemList.Add(new Item(10));
+itemList.Add(new Item(99));
+itemList.Add(new Item(24));
+itemList.Add(new Item(100));
+itemList.Add(new Item(12));
 //排序方法
 itemList.Sort();
-for(inti=0;i&lt;itemList.Count;i++){Console.WriteLine(itemList[i].money);}
+for(int i=0;i&lt;itemList.Count;i++){Console.WriteLine(itemList[i].money);}
 #endregion
 #region通过委托函数进行排序
-List&lt;ShopItem&gt;shopItems=newList&lt;ShopItem&gt;();
-shopItems.Add(newShopItem(2));
-shopItems.Add(newShopItem(1));
-shopItems.Add(newShopItem(4));
-shopItems.Add(newShopItem(3));
-shopItems.Add(newShopItem(6));
-shopItems.Add(newShopItem(5));
+List&lt;ShopItem&gt;shopItems=new List&lt;ShopItem&gt;();
+shopItems.Add(new ShopItem(2));
+shopItems.Add(new ShopItem(1));
+shopItems.Add(new ShopItem(4));
+shopItems.Add(new ShopItem(3));
+shopItems.Add(new ShopItem(6));
+shopItems.Add(new ShopItem(5));
 //shopItems.Sort(SortShopItem);
 //匿名函数
 //shopItems.Sort(delegate(ShopItema,ShopItemb)
@@ -2034,11 +2034,11 @@ shopItems.Add(newShopItem(5));
 //lambad表达式配合三目运算符的完美呈现
 shopItems.Sort((a,b)=&gt;{returna.id&gt;b.id?1:-1;});
 Console.WriteLine("*********************");
-for(inti=0;i&lt;shopItems.Count;i++)
+for(int i=0;i&lt;shopItems.Count;i++)
 Console.WriteLine(shopItems[i].id);
 #endregion
 }
-staticintSortShopItem(ShopItema,ShopItemb){
+staticint SortShopItem(ShopItema,ShopItemb){
 //传入的两个对象为列表中的两个对象
 //进行两两的比较用左边的和右边的条件比较
 //返回值规则和之前一样0做标准负数在左（前）正数在右（后）
@@ -2046,7 +2046,7 @@ if(a.id&gt;b.id)return-1;
 elsereturn1;}
 }
 //总结
-//系统自带的变量(int,float,double.....)一般都可以直接Sort
+//系统自带的变量(int ,float,double.....)一般都可以直接Sort
 //自定义类SOrt有两种方式
 //1.继承接口IComparable
 //2.在Sort中传入委托函数
@@ -2064,13 +2064,13 @@ elsereturn1;}
 //和谐的变化，自然的变化
 //因为里氏替换原则父类可以装子类
 //所以子类变父类
-//比如string变成object
+//比如string变成object 
 //感受是和谐的
 //逆变：
 //逆常规的变化，不正常的变化
 //因为里氏替换原则父类可以装子类但是子类不能装父类
 //所以父类变子类
-//比如object变成string
+//比如object 变成string
 //感受是不和谐的
 //协变和逆变是用来修饰泛型的
 //协变：out
@@ -2083,14 +2083,14 @@ elsereturn1;}
 //用out修饰的泛型只能作为返回值
 delegateTTestOut&lt;outT&gt;();
 //用in修饰的泛型只能作为参数
-delegatevoidTestIn&lt;inT&gt;(Tt);
+delegatevoid TestIn&lt;inT&gt;(Tt);
 //2.结合里氏替换原则理解
-classFather{}
-classSon:Father{}
+class Father{}
+class Son:Father{}
 #endregion
-classProgram
+class Program
 {
-staticvoidMain(string[]args)
+staticvoid Main(string[]args)
 {
 Console.WriteLine("协变逆变");
 #region作用（结合里氏替换原则理解）
@@ -2098,7 +2098,7 @@ Console.WriteLine("协变逆变");
 //看起来就是son——&gt;father
 TestOut&lt;Son&gt;os=()=&gt;
 {
-returnnewSon();
+returnnew Son();
 };
 TestOut&lt;Father&gt;of=os;
 Fatherf=of();//实际上返回的是os里面装的函数返回的是Son
@@ -2107,7 +2107,7 @@ Fatherf=of();//实际上返回的是os里面装的函数返回的是Son
 TestIn&lt;Father&gt;iF=(value)=&gt;{};
 TestIn&lt;Son&gt;iS=iF;
 
-iS(newSon());//实际上调用的是iF
+iS(new Son());//实际上调用的是iF
 #endregion
 }
 }
@@ -2130,12 +2130,12 @@ usingSystem.Threading;
 
 namespaceLesson18_多线程
 {
-classProgram
+class Program
 {
 staticboolisRuning=true;
 
-staticobjectobj=newobject();
-staticvoidMain(string[]args)
+staticobject obj=new object ();
+staticvoid Main(string[]args)
 {
 Console.WriteLine("多线程");
 
@@ -2168,7 +2168,7 @@ Console.WriteLine("多线程");
 //1.申明一个新的线程
 //注意线程执行的代码需要封装到一个函数中
 //新线程将要执行的代码逻辑被封装到了一个函数语句块中
-Threadt=newThread(NewThreadLogic);
+Threadt=new Thread(new ThreadLogic);
 //2.启动线程
 t.Start();
 
@@ -2233,7 +2233,7 @@ Console.Write("●");
 #endregion
 }
 
-staticvoidNewThreadLogic()
+staticvoid new ThreadLogic()
 {
 //新开线程执行的代码逻辑在该函数语句块中
 while(isRuning)
@@ -2356,36 +2356,36 @@ Console.WriteLine("其它版本");
 //3.程序运行时创建新对象，用这些对象执行任务
 #endregion
 </code></pre>
-<pre class="notranslate"><code class="notranslate">classTest
+<pre class="notranslate"><code class="notranslate">class Test
 {
-privateinti=1;
-publicintj=0;
-publicstringstr="123";
-publicTest()
+privateint i=1;
+public int j=0;
+public stringstr="123";
+public Test()
 {
 
 }
 
-publicTest(inti)
+public Test(int i)
 {
 this.i=i;
 }
 
-publicTest(inti,stringstr):this(i)
+public Test(int i,stringstr):this(i)
 {
 this.str=str;
 
 }
 
-publicvoidSpeak()
+public void Speak()
 {
 Console.WriteLine(i);
 }
 }
 
-classProgram
+class Program
 {
-staticvoidMain(string[]args)
+staticvoid Main(string[]args)
 {
 Console.WriteLine("反射");
 #region语法相关
@@ -2398,12 +2398,12 @@ Console.WriteLine("反射");
 //有关类型的成员（如构造函数、方法、字段、属性和类的事件）
 
 #region获取Type
-//1.万物之父object中的GetType()可以获取对象的Type
-inta=42;
+//1.万物之父object 中的GetType()可以获取对象的Type
+int a=42;
 Typetype=a.GetType();
 Console.WriteLine(type);
 //2.通过typeof关键字传入类名也可以得到对象的Type
-Typetype2=typeof(int);
+Typetype2=typeof(int );
 Console.WriteLine(type2);
 //3.通过类的名字也可以获取类型
 //注意类名必须包含命名空间不然找不到
@@ -2425,7 +2425,7 @@ Typet=typeof(Test);
 //然后得到所有公共成员
 //需要引用命名空间usingSystem.Reflection;
 MemberInfo[]infos=t.GetMembers();
-for(inti=0;i&lt;infos.Length;i++)
+for(int i=0;i&lt;infos.Length;i++)
 {
 Console.WriteLine(infos[i]);
 }
@@ -2434,34 +2434,34 @@ Console.WriteLine(infos[i]);
 #region获取类的公共构造函数并调用
 //1.获取所有构造函数
 ConstructorInfo[]ctors=t.GetConstructors();
-for(inti=0;i&lt;ctors.Length;i++)
+for(int i=0;i&lt;ctors.Length;i++)
 {
 Console.WriteLine(ctors[i]);
 }
 
 //2.获取其中一个构造函数并执行
 //得构造函数传入Type数组数组中内容按顺序是参数类型
-//执行构造函数传入object数组表示按顺序传入的参数
+//执行构造函数传入object 数组表示按顺序传入的参数
 //2-1得到无参构造
-ConstructorInfoinfo=t.GetConstructor(newType[0]);
+ConstructorInfoinfo=t.GetConstructor(new Type[0]);
 //执行无参构造无参构造没有参数传null
 Testobj=info.Invoke(null)asTest;
 Console.WriteLine(obj.j);
 
 //2-2得到有参构造
-ConstructorInfoinfo2=t.GetConstructor(newType[]{typeof(int)});
-obj=info2.Invoke(newobject[]{2})asTest;
+ConstructorInfoinfo2=t.GetConstructor(new Type[]{typeof(int )});
+obj=info2.Invoke(new object []{2})asTest;
 Console.WriteLine(obj.str);
 
-ConstructorInfoinfo3=t.GetConstructor(newType[]{typeof(int),typeof(string)});
-obj=info3.Invoke(newobject[]{4,"444444"})asTest;
+ConstructorInfoinfo3=t.GetConstructor(new Type[]{typeof(int ),typeof(string)});
+obj=info3.Invoke(new object []{4,"444444"})asTest;
 Console.WriteLine(obj.str);
 #endregion
 
 #region获取类的公共成员变量
 //1.得到所有成员变量
 FieldInfo[]fieldInfos=t.GetFields();
-for(inti=0;i&lt;fieldInfos.Length;i++)
+for(int i=0;i&lt;fieldInfos.Length;i++)
 {
 Console.WriteLine(fieldInfos[i]);
 }
@@ -2470,7 +2470,7 @@ FieldInfoinfoJ=t.GetField("j");
 Console.WriteLine(infoJ);
 
 //3.通过反射获取和设置对象的值
-Testtest=newTest();
+Testtest=new Test();
 test.j=99;
 test.str="2222";
 //3-1通过反射获取对象的某个变量的值
@@ -2485,18 +2485,18 @@ Console.WriteLine(infoJ.GetValue(test));
 //MethodInfo是方法的反射信息
 TypestrType=typeof(string);
 MethodInfo[]methods=strType.GetMethods();
-for(inti=0;i&lt;methods.Length;i++)
+for(int i=0;i&lt;methods.Length;i++)
 {
 Console.WriteLine(methods[i]);
 }
 //1.如果存在方法重载用Type数组表示参数类型
 MethodInfosubStr=strType.GetMethod("Substring",
-newType[]{typeof(int),typeof(int)});
+new Type[]{typeof(int ),typeof(int )});
 //2.调用该方法
 //注意：如果是静态方法Invoke中的第一个参数传null即可
 stringstr="Hello,World!";
 //第一个参数相当于是哪个对象要执行这个成员方法
-objectresult=subStr.Invoke(str,newobject[]{7,5});
+object result=subStr.Invoke(str,new object []{7,5});
 Console.WriteLine(result);
 
 #endregion
@@ -2542,14 +2542,14 @@ Console.WriteLine(result);
 //1.先加载一个指定程序集
 Assemblyasembly=Assembly.LoadFrom(@"C:\Users\MECHREVO\Desktop\CSharp进阶教学\Lesson18_练习题\bin\Debug\netcoreapp3.1\Lesson18_练习题");
 Type[]types=asembly.GetTypes();
-for(inti=0;i&lt;types.Length;i++)
+for(int i=0;i&lt;types.Length;i++)
 {
 Console.WriteLine(types[i]);
 }
 //2.再加载程序集中的一个类对象之后才能使用反射
 Typeicon=asembly.GetType("Lesson18_练习题.Icon");
 MemberInfo[]members=icon.GetMembers();
-for(inti=0;i&lt;members.Length;i++)
+for(int i=0;i&lt;members.Length;i++)
 {
 Console.WriteLine(members[i]);
 }
@@ -2558,7 +2558,7 @@ Console.WriteLine(members[i]);
 TypemoveDir=asembly.GetType("Lesson18_练习题.E_MoveDir");
 FieldInforight=moveDir.GetField("Right");
 //直接实例化对象
-objecticonObj=Activator.CreateInstance(icon,10,5,right.GetValue(null));
+object iconObj=Activator.CreateInstance(icon,10,5,right.GetValue(null));
 //得到对象中的方法通过反射
 MethodInfomove=icon.GetMethod("Move");
 MethodInfodraw=icon.GetMethod("Draw");
@@ -2635,12 +2635,12 @@ Console.WriteLine(testObj.j);
 #region自定义特性
 //继承特性基类Attribute
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Field,AllowMultiple=true,Inherited=false)]
-classMyCustomAttribute:Attribute
+class MyCustomAttribute:Attribute
 {
 //特性中的成员一般根据需求来写
-publicstringinfo;
-publicMyCustomAttribute(stringinfo){this.info=info;}
-publicvoidTestFun(){Console.WriteLine("特性的方法");}
+public stringinfo;
+public MyCustomAttribute(stringinfo){this.info=info;}
+public void TestFun(){Console.WriteLine("特性的方法");}
 }
 #endregion
 #region特性的使用
@@ -2651,13 +2651,13 @@ publicvoidTestFun(){Console.WriteLine("特性的方法");}
 //类、函数、变量上一行，表示他们具有该特性信息
 [MyCustom("这个是我自己写的一个用于计算的类")]
 [MyCustom("这个是我自己写的一个用于计算的类")]
-classMyClass
+class MyClass
 {
 [MyCustom("这是一个成员变量")]
-publicintvalue;
+public int value;
 //[MyCustom("这是一个用于计算加法的函数")]
-//publicvoidTestFun([MyCustom("函数参数")]inta){}
-publicvoidTestFun(inta){}
+//public void TestFun([MyCustom("函数参数")]int a){}
+public void TestFun(int a){}
 }
 #endregion
 #region限制自定义特性的使用范围
@@ -2666,25 +2666,25 @@ publicvoidTestFun(inta){}
 //参数一：AttributeTargets——特性能够用在哪些地方
 //参数二：AllowMultiple——是否允许多个特性实例用在同一个目标上
 //参数三：Inherited——特性是否能被派生类和重写成员继承
-publicclassMyCustom2Attribute:Attribute{}
+public class MyCustom2Attribute:Attribute{}
 #endregion
 #region系统自带特性——过时特性
 //过时特性
 //Obsolete
 //用于提示用户使用的方法等成员已经过时建议使用新方法
 //一般加在函数前的特性
-classTestClass
+class TestClass
 {
 //参数一：调用过时方法时提示的内容
 //参数二：true-使用该方法时会报错false-使用该方法时直接警告
 [Obsolete("OldSpeak方法已经过时了，请使用Speak方法",false)]
-publicvoidOldSpeak(stringstr)
+public void OldSpeak(stringstr)
 {
 Console.WriteLine(str);
 }
-publicvoidSpeak(){}
-publicvoidSpeakCaller(stringstr,[CallerFilePath]stringfileName="",
-[CallerLineNumber]intline=0,[CallerMemberName]stringtarget="")
+public void Speak(){}
+public void SpeakCaller(stringstr,[CallerFilePath]stringfileName="",
+[CallerLineNumber]int line=0,[CallerMemberName]stringtarget="")
 {
 Console.WriteLine(str);
 Console.WriteLine(fileName);
@@ -2717,20 +2717,20 @@ Console.WriteLine(target);
 //一般用来调用C或者C++的Dll包写好的方法
 //需要引用命名空间usingSystem.Runtime.InteropServices
 #endregion
-classProgram
+class Program
 {
 [DllImport("Test.dll")]
-publicstaticexternintAdd(inta,intb);
+public staticexternint Add(int a,int b);
 [Conditional("Fun")]
-staticvoidFun()
+staticvoid Fun()
 {
 Console.WriteLine("Fun执行");
 }
-staticvoidMain(string[]args)
+staticvoid Main(string[]args)
 {
 Console.WriteLine("特性");
 #region特性的使用
-MyClassmc=newMyClass();
+MyClassmc=new MyClass();
 Typet=mc.GetType();
 //t=typeof(MyClass);
 //t=Type.GetType("Lesson21_特性.MyClass");
@@ -2742,8 +2742,8 @@ if(t.IsDefined(typeof(MyCustomAttribute),false))
 Console.WriteLine("该类型应用了MyCustom特性");
 }
 //获取Type元数据中的所有特性
-object[]array=t.GetCustomAttributes(true);
-for(inti=0;i&lt;array.Length;i++)
+object []array=t.GetCustomAttributes(true);
+for(int i=0;i&lt;array.Length;i++)
 {
 if(array[i]isMyCustomAttribute)
 {
@@ -2751,7 +2751,7 @@ Console.WriteLine((array[i]asMyCustomAttribute).info);
 (array[i]asMyCustomAttribute).TestFun();
 }
 }
-TestClasstc=newTestClass();
+TestClasstc=new TestClass();
 tc.OldSpeak("123");
 tc.Speak();
 tc.SpeakCaller("123123123123123");
@@ -2774,228 +2774,228 @@ Fun();
 <li>
 <h3>迭代器</h3>
 <pre class="notranslate"><code class="notranslate">usingSystem;
-using System.Collections; 
-namespace  迭代器
+usingSystem.Collections;
+namespace迭代器
 {
-    #region  迭代器是什么
-    //迭代器（iterator）有时又称光标（cursor）
-    //是程序设计的软件设计模式
-    //迭代器模式提供一个方法顺序访问一个聚合对象中的各个元素
-    //而又不暴露其内部的标识 
-    //在表现效果上看
-    //是可以在容器对象（例如链表或数组）上遍历访问的接口
-    //设计人员无需关心容器对象的内存分配的实现细节
-    //可以用foreach遍历的类，都是实现了迭代器的
-    #endregion 
-    #region 标准迭代器的实现方法
-    //关键接口：IEnumerator,IEnumerable
-    //命名空间：using System.Collections;
-    //可以通过同时继承IEnumerable和IEnumerator实现其中的方法 
-    class CustomList : IEnumerable, IEnumerator
-    {
-        private int[] list;
-        //从-1开始的光标 用于表示 数据得到了哪个位置
-        private int position = -1; 
-        public CustomList()
-        {
-list = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
-        } 
-        #region IEnumerable
-        public IEnumerator GetEnumerator()
-        {
+#region迭代器是什么
+//迭代器（iterator）有时又称光标（cursor）
+//是程序设计的软件设计模式
+//迭代器模式提供一个方法顺序访问一个聚合对象中的各个元素
+//而又不暴露其内部的标识
+//在表现效果上看
+//是可以在容器对象（例如链表或数组）上遍历访问的接口
+//设计人员无需关心容器对象的内存分配的实现细节
+//可以用foreach遍历的类，都是实现了迭代器的
+#endregion
+#region标准迭代器的实现方法
+//关键接口：IEnumerator,IEnumerable
+//命名空间：usingSystem.Collections;
+//可以通过同时继承IEnumerable和IEnumerator实现其中的方法
+class CustomList:IEnumerable,IEnumerator
+{
+privateint []list;
+//从-1开始的光标用于表示数据得到了哪个位置
+privateint position=-1;
+public CustomList()
+{
+list=new int []{1,2,3,4,5,6,7,8};
+}
+#regionIEnumerable
+public IEnumeratorGetEnumerator()
+{
 Reset();
-return this;
-        }
-        #endregion 
-        public object Current
-        {
+returnthis;
+}
+#endregion
+public object Current
+{
 get
 {
-   return list[position];
+returnlist[position];
 }
-        }
-        public bool MoveNext()
-        {
+}
+public boolMoveNext()
+{
 //移动光标
 ++position;
-//是否溢出 溢出就不合法
-return position &lt; list.Length;
-        } 
-        //reset是重置光标位置 一般写在获取 IEnumerator对象这个函数中
-        //用于第一次重置光标位置
-        public void Reset()
-        {
-position = -1;
-        }
-    }
-    #endregion 
-    #region  用yield return 语法糖实现迭代器
-    //yield return 是C#提供给我们的语法糖
-    //所谓语法糖，也称糖衣语法
-    //主要作用就是将复杂逻辑简单化，可以增加程序的可读性
-    //从而减少程序代码出错的机会 
-    //关键接口：IEnumerable
-    //命名空间：using System.Collections;
-    //让想要通过foreach遍历的自定义类实现接口中的方法GetEnumerator即可 
-    class CustomList2 : IEnumerable
-    {
-        private int[] list; 
-        public CustomList2()
-        {
-list = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
-        } 
-        public IEnumerator GetEnumerator()
-        {
-for (int i = 0; i &lt; list.Length; i++)
-{
-   //yield关键字 配合迭代器使用
-   //可以理解为 暂时返回 保留当前的状态
-   //一会还会在回来
-   //C#的语法糖
-   yield return list[i];
+//是否溢出溢出就不合法
+returnposition&lt;list.Length;
 }
-//yield return list[0];
-//yield return list[1];
-//yield return list[2];
-//yield return list[3];
-//yield return list[4];
-//yield return list[5];
-//yield return list[6];
-//yield return list[7];
-        }
-    } 
-    #endregion 
-    #region  用yield return 语法糖为泛型类实现迭代器
-    class CustomList&lt;T&gt; : IEnumerable
-    {
-        private T[] array; 
-        public CustomList(params T[] array)
-        {
-this.array = array;
-        } 
-        public IEnumerator GetEnumerator()
-        {
-for (int i = 0; i &lt; array.Length; i++)
+//reset是重置光标位置一般写在获取IEnumerator对象这个函数中
+//用于第一次重置光标位置
+public void Reset()
 {
-   yield return array[i];
+position=-1;
 }
-        }
-    }
-    #endregion 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-Console.WriteLine("迭代器"); 
-CustomList list = new CustomList(); 
-//foreach本质 
-//1.先获取in后面这个对象的 IEnumerator
-//  会调用对象其中的GetEnumerator方法 来获取
-//2.执行得到这个IEnumerator对象中的 MoveNext方法
-//3.只要MoveNext方法的返回值时true 就会去得到Current
-//  然后复制给 item
-//foreach (int item in list)
+}
+#endregion
+#region用yieldreturn语法糖实现迭代器
+//yieldreturn是C#提供给我们的语法糖
+//所谓语法糖，也称糖衣语法
+//主要作用就是将复杂逻辑简单化，可以增加程序的可读性
+//从而减少程序代码出错的机会
+//关键接口：IEnumerable
+//命名空间：usingSystem.Collections;
+//让想要通过foreach遍历的自定义类实现接口中的方法GetEnumerator即可
+class CustomList2:IEnumerable
+{
+privateint []list;
+public CustomList2()
+{
+list=new int []{1,2,3,4,5,6,7,8};
+}
+public IEnumeratorGetEnumerator()
+{
+for(int i=0;i&lt;list.Length;i++)
+{
+//yield关键字配合迭代器使用
+//可以理解为暂时返回保留当前的状态
+//一会还会在回来
+//C#的语法糖
+yieldreturnlist[i];
+}
+//yieldreturnlist[0];
+//yieldreturnlist[1];
+//yieldreturnlist[2];
+//yieldreturnlist[3];
+//yieldreturnlist[4];
+//yieldreturnlist[5];
+//yieldreturnlist[6];
+//yieldreturnlist[7];
+}
+}
+#endregion
+#region用yieldreturn语法糖为泛型类实现迭代器
+class CustomList&lt;T&gt;:IEnumerable
+{
+privateT[]array;
+public CustomList(paramsT[]array)
+{
+this.array=array;
+}
+public IEnumeratorGetEnumerator()
+{
+for(int i=0;i&lt;array.Length;i++)
+{
+yieldreturnarray[i];
+}
+}
+}
+#endregion
+class Program
+{
+staticvoid Main(string[]args)
+{
+Console.WriteLine("迭代器");
+CustomListlist=new CustomList();
+//foreach本质
+//1.先获取in后面这个对象的IEnumerator
+//会调用对象其中的GetEnumerator方法来获取
+//2.执行得到这个IEnumerator对象中的MoveNext方法
+//3.只要MoveNext方法的返回值时true就会去得到Current
+//然后复制给item
+//foreach(int iteminlist)
 //{
-//    Console.WriteLine(item);
-//} 
-//foreach (int item in list)
+//Console.WriteLine(item);
+//}
+//foreach(int iteminlist)
 //{
-//    Console.WriteLine(item);
-//} 
-CustomList&lt;string&gt; list2 = new CustomList&lt;string&gt;("123","321","333","555");
-foreach (string item in list2)
+//Console.WriteLine(item);
+//}
+CustomList&lt;string&gt;list2=new CustomList&lt;string&gt;("123","321","333","555");
+foreach(stringiteminlist2)
 {
-   Console.WriteLine(item);
+Console.WriteLine(item);
 }
-foreach (string item in list2)
+foreach(stringiteminlist2)
 {
-   Console.WriteLine(item);
-} 
-        }
-    }
-} 
+Console.WriteLine(item);
+}
+}
+}
+}
 //总结：
 //迭代器就是可以让我们在外部直接通过foreach遍历对象中元素而不需要了解其结构
 //主要的两种方式
-//1.传统方式 继承两个接口 实现里面的方法
-//2.用语法糖 yield return 去返回内容 只需要继承一个接口即可
+//1.传统方式继承两个接口实现里面的方法
+//2.用语法糖yieldreturn去返回内容只需要继承一个接口即可
 
 </code></pre>
 </li>
 <li>
 <h3>特殊语法</h3>
-<pre class="notranslate"><code class="notranslate">classPerson
+<pre class="notranslate"><code class="notranslate">class Person
 {
-privateintmoney;
-publicboolsex;
-publicstringName
+privateint money;
+public boolsex;
+public stringName
 {
 get=&gt;"xxs";
 set=&gt;sex=true;
 }
-publicintAge
+public int Age
 {
 get;
 set;
 }
-publicPerson(intmoney)
+public Person(int money)
 {
 this.money=money;
 }
-publicintAdd(intx,inty)=&gt;x+y;
-publicvoidSpeak(stringstr)=&gt;Console.WriteLine(str);
+public int Add(int x,int y)=&gt;x+y;
+public void Speak(stringstr)=&gt;Console.WriteLine(str);
 }
 
-classProgram
+class Program
 {
-staticvoidMain(string[]args)
+staticvoid Main(string[]args)
 {
 Console.WriteLine("特殊语法");
-#regionvar隐式类型
-//var是一种特殊的变量类型
+#regionvar 隐式类型
+//var 是一种特殊的变量类型
 //它可以用来表示任意类型的变量
 //注意：
-//1.var不能作为类的成员只能用于临时变量申明时
+//1.var 不能作为类的成员只能用于临时变量申明时
 //也就是一般写在函数语句块中
-//2.var必须初始化
-vari=5;
-vars="123";
-vararray=newint[]{1,2,3,4};
-varlist=newList&lt;int&gt;();
+//2.var 必须初始化
+var i=5;
+var s="123";
+var array=new int []{1,2,3,4};
+var list=new List&lt;int &gt;();
 #endregion
 #region设置对象初始值
 //申明对象时
 //可以通过直接写大括号的形式初始化公共成员变量和属性
-Personp=newPerson(100){sex=true,Age=18,Name="xxs"};
-Personp2=newPerson(200){Age=18};
+Personp=new Person(100){sex=true,Age=18,Name="xxs"};
+Personp2=new Person(200){Age=18};
 #endregion
 #region设置集合初始值
 //申明集合对象时
 //也可以通过大括号直接初始化内部属性
-int[]array2=newint[]{1,2,3,4,5};
-List&lt;int&gt;listInt=newList&lt;int&gt;(){1,2,3,4,5,6};
-List&lt;Person&gt;listPerson=newList&lt;Person&gt;(){
-newPerson(200),
-newPerson(100){Age=10},
-newPerson(1){sex=true,Name="xxs"}
+int []array2=new int []{1,2,3,4,5};
+List&lt;int &gt;listInt=new List&lt;int &gt;(){1,2,3,4,5,6};
+List&lt;Person&gt;listPerson=new List&lt;Person&gt;(){
+new Person(200),
+new Person(100){Age=10},
+new Person(1){sex=true,Name="xxs"}
 };
-Dictionary&lt;int,string&gt;dic=newDictionary&lt;int,string&gt;()
+Dictionary&lt;int ,string&gt;dic=new Dictionary&lt;int ,string&gt;()
 {
 {1,"123"},
 {2,"222"}
 };
 #endregion
 #region匿名类型
-//var变量可以申明为自定义的匿名类型
-varv=new{age=10,money=11,name="小明"};
+//var 变量可以申明为自定义的匿名类型
+var v=new {age=10,money=11,name="小明"};
 Console.WriteLine(v.age);
 Console.WriteLine(v.name);
 #endregion
 #region可空类型
 //1.值类型是不能赋值为空的
-//intc=null;
+//int c=null;
 //2.申明时在值类型后面加?可以赋值为空
-int?c=3;
+int ?c=3;
 //3.判断是否为空
 if(c.HasValue)
 {
@@ -3003,14 +3003,14 @@ Console.WriteLine(c);
 Console.WriteLine(c.Value);
 }
 //4.安全获取可空类型值
-int?value=null;
+int ?value=null;
 //4-1.如果为空默认返回值类型的默认值
 Console.WriteLine(value.GetValueOrDefault());
 //4-2.也可以指定一个默认值
 Console.WriteLine(value.GetValueOrDefault(100));
 float?f=null;
 double?d=null;
-objecto=null;
+object o=null;
 if(o!=null)
 {
 Console.WriteLine(o.ToString());
@@ -3018,7 +3018,7 @@ Console.WriteLine(o.ToString());
 //相当于是一种语法糖能够帮助我们自动去判断o是否为空
 //如果是null就不会执行tostring也不会报错
 Console.WriteLine(o?.ToString());
-int[]arrryInt=null;
+int []arrryInt=null;
 Console.WriteLine(arrryInt?[0]);
 Actionaction=null;
 //if(action!=null)
@@ -3032,10 +3032,10 @@ action?.Invoke();
 //左边值??右边值
 //如果左边值为null就返回右边值否则返回左边值
 //只要是可以为null的类型都能用
-int?intV=null;
-//intintI=intV==null?100:intV.Value;
-intintI=intV??100;
-Console.WriteLine(intI);
+int ?int V=null;
+//int int I=int V==null?100:int V.Value;
+int int I=int V??100;
+Console.WriteLine(int I);
 stringstr=null;
 str=str??"hahah";
 Console.WriteLine(str);
@@ -3044,14 +3044,14 @@ Console.WriteLine(str);
 //关键符号：$
 //用$来构造字符串，让字符串中可以拼接变量
 stringname="xxs";
-intage=18;
+int age=18;
 Console.WriteLine($"好好学习,{name},年龄：{age}");
 #endregion
 #region单句逻辑简略写法
 //当循环或者if语句中只有一句代码时大括号可以省略
 if(true)
 Console.WriteLine("123123");
-for(intj=0;j&lt;10;j++)
+for(int j=0;j&lt;10;j++)
 Console.WriteLine(j
 while(true)
 Console.WriteLine("123123");
